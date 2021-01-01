@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="/theme/css/normalize.css" />
+        <link rel="stylesheet" href="/theme/css/simplegrid.css" />
+        <link rel="stylesheet" href="/theme/css/pygment.css" />
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link rel="stylesheet" href="/theme/css/youtube.css" />
+        <link rel="stylesheet" href="/theme/css/custom.css" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6R4M5ZQHNJ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-6R4M5ZQHNJ');
+	</script>
+    </head>
+
+    <body>
+        <header class="grid grid-pad">
+            <div class="col-1-1 header">
+                {% block header %}
+                    <ul id="navigation">
+		        <li><a href="/"><span class="bigger">{{ SITENAME }}</span></a></li>
+                        {% if DISPLAY_PAGES_ON_MENU != False %}
+                            {% for page in pages %}
+                                <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
+                {% endblock %}
+            </div>
+        </header>
+
+        <div class="grid grid-pad">
+            <section class="col-10-12" id="content">
+                {% block content %}{% endblock %}
+            </section>
+
+            <aside class="col-2-12" id="side">
+                {% block side %}
+                    {% if categories %}
+                        <div class="widget cat">
+                            <h2>Categories</h2>
+                            {% for cat, null in categories %}
+                                <div class="cat-link">
+                                    <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.name }}</a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    {% if LINKS %}
+                        <div class="widget">
+                            <h2>Links</h2>
+                            {% for name, url in LINKS %}
+                                <div class="cat-link">
+                                    <a href="{{ url }}">{{ name }}</a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    {% if SOCIAL %}
+                        <div class="widget">
+                            <h2>Personal</h2>
+                            {% for name, url in SOCIAL %}
+                                <div class="cat-link">
+                                    <a href="{{ url }}">{{ name }}</a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+
+                {% endblock %}
+            </aside>
+        </div>
+    </body>
+</html>

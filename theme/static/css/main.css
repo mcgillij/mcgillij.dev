@@ -1,0 +1,174 @@
+body {
+    background-color: #252833;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #1E67CE;
+}
+
+strong {
+    color: #439A40;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #1E67CE;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.header {
+    background-color: #2B3844;
+
+    font-size: 1.143em;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 15px 0 15px 0;
+}
+
+#navigation {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#navigation li {
+    display: inline;
+    margin:0 auto;
+    float: left;
+}
+
+#navigation li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#navigation li a:hover{
+    background-color: #476684;
+    color: white;
+}
+
+.group {
+    display: inline-block;
+}
+
+#content {
+    margin-top: 20px;
+}
+
+#side {
+    display:block;
+    padding-left: 10px;
+}
+
+#side h2 {
+    padding:0;
+    margin:0;
+    font-size: 15px;
+}
+
+#side.widget.ul {
+    list-style: none;
+}
+
+.widget {
+    background-color: #22242E;
+    padding:10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.article-index {
+    padding-bottom: 10px;
+    background-color: #22242E;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.article-index h3 {
+    padding:0;
+    margin:0;
+    margin-bottom: 3px;
+}
+
+.article-index a {
+    text-decoration: none;
+    color: #1E67CE;
+}
+
+.article-index a:hover{
+    text-decoration: underline;
+}
+
+.cat-list {
+    list-style: none;
+}
+
+.bigger {
+    font-size: 42px;
+}
+
+.tag {
+    color: #1E67CE;
+    font-size: 13px;
+}
+
+.footer {
+    background-color: #2B3844;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.list-label {
+    padding:0;
+    margin:0;
+    margin-top: 10px;
+}
+
+.label {
+    margin-left: 20px;
+    background-color: #414C57;
+    padding:7px;
+    border-radius: 25px;
+}
+
+.cat-link {
+    border-bottom: 1px dashed #414C57;
+    padding-bottom:5px;
+    padding-top: 5px;
+}
+
+.article {
+    padding: 20px;
+    background-color: #22242E;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.article h1 {
+    padding:0;
+    margin:0;
+}
+
+.article-content {
+    color: #fff;
+}
+
+.article-content h2 {
+    color: #AA7A32;
+}
+
+.highlight {
+    padding: 10px;
+    border-radius: 10px;
+}

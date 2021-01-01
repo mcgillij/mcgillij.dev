@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if articles %}
+        {% for article in articles %}
+            <div class="article-index">
+                <div class="grid grid-pad">
+                    <div class="col-8-12">
+                        <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+                        <small>published on {{ article.date.strftime('%d/%m/%Y') }}</small>
+                        <small>| tags : </small>{% for tag in article.tags %}
+                            {% if loop.last %}
+                                <span class="tag"><a href="{{ SITEURL}}/{{ tag.url }}">{{ tag }}</a></span>
+                            {% else %}
+			    <span class="tag"><a href="{{ SITEURL}}/{{ tag.url }}">{{ tag }}</a>,</span>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="col-4-12">
+			<img src="{{ SITEURL }}/icons/{{ article.category }}.png">
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
