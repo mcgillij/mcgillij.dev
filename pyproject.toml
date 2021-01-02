@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "mcgillij.dev"
+version = "0.1.0"
+description = ""
+authors = ["mcgillij <mcgillivray.jason@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pelican = "^4.5.3"
+typogrify = "^2.0.7"
+Markdown = "^3.3.3"
+beautifulsoup4 = "^4.9.3"
+pysvg-py3 = "^0.2.2"
+Pillow = "^8.0.1"
+cssutils = "^1.0.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
