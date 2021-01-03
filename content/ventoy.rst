@@ -8,7 +8,7 @@ Ventoy how did I not know about you?
 :tags: Linux, tutorial
 :slug: ventoy
 :summary: Neat tool that I didn't know about for bootable media
-:cover_image: usbkey.png
+:cover_image: usbkey.jpg
 
 .. contents::
 

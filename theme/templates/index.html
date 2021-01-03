@@ -12,12 +12,13 @@
                             {% if loop.last %}
                                 <span class="tag"><a href="{{ SITEURL}}/{{ tag.url }}">{{ tag }}</a></span>
                             {% else %}
-			    <span class="tag"><a href="{{ SITEURL}}/{{ tag.url }}">{{ tag }}</a>,</span>
+                               <span class="tag"><a href="{{ SITEURL}}/{{ tag.url }}">{{ tag }}</a>,</span>
                             {% endif %}
                         {% endfor %}
+			{{ article.summary }}
                     </div>
                     <div class="col-4-12">
-			<img src="{{ SITEURL }}/icons/{{ article.category }}.png">
+                        <img src="{{ SITEURL }}/icons/{{ article.category }}.png">
                     </div>
                 </div>
             </div>
