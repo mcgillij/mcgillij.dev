@@ -2,7 +2,7 @@ Cyberpunk 2077 in Linux kinda?
 ##############################
 
 :category: Games
-:author: Jason McGillivray
+:author: mcgillij
 :tags: Linux, Cyberpunk, 2077, VFIO, games, demo
 :date: 2020-12-29 19:47
 :cover_image: cyberpunk.jpg

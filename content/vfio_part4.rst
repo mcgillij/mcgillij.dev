@@ -1,7 +1,7 @@
 Odds and Ends
 ############################
 
-:author: Jason McGillivray
+:author: mcgillij
 :category: Linux
 :date: 2020-12-28 14:52
 :tags: Linux, VFIO, Virtualization, Tutorial, BIOS

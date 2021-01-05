@@ -2,7 +2,7 @@ Ventoy how did I not know about you?
 ####################################
 
 
-:author: Jason McGillivray
+:author: mcgillij 
 :category: Linux
 :date: 2021-01-03 17:01
 :tags: Linux, tutorial

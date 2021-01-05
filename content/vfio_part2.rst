@@ -1,7 +1,7 @@
 Isolation (of hardware)
 ########################
 
-:author: Jason McGillivray
+:author: mcgillij
 :category: Linux
 :date: 2020-12-26 14:50
 :tags: Linux, VFIO, Tutorial, Virtualization

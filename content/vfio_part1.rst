@@ -2,7 +2,7 @@ Intro to VFIO
 ####################
 
 
-:author: Jason McGillivray
+:author: mcgillij 
 :category: Linux
 :date: 2020-12-25 14:49
 :tags: Linux, VFIO, Vitualization, Tutorial

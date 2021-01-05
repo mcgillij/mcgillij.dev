@@ -1,9 +1,9 @@
 Looking Glass
 #############
 
-:author: Jason McGillivray
+:author: mcgillij
 :category: Virtualization
-:date: 2020-12-29 22:32
+:date: 2020-12-30 22:32
 :tags: Linux, VFIO, Virtualization, Tutorial, BIOS, LookingGlass
 :slug: looking-glass-vfio
 :cover_image: lg.png

@@ -1,7 +1,7 @@
 The Machine! (virtual)
 ###########################
 
-:author: Jason McGillivray
+:author: mcgillij 
 :category: Linux
 :date: 2020-12-27 14:51
 :tags: Linux, VFIO, Tutorial, Virtualization 

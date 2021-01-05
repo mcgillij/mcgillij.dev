@@ -1,7 +1,7 @@
 Creating a py3status module to monitor my UPS battery
 #####################################################
 
-:author: Jason McGillivray
+:author: mcgillij
 :category: Python
 :date: 2020-12-31 19:09
 :tags: UPS, Battery, Python, Tutorial, i3 
