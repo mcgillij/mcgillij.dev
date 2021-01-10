@@ -4,7 +4,7 @@ Isolation (of hardware)
 :author: mcgillij
 :category: Linux
 :date: 2020-12-26 14:50
-:tags: Linux, VFIO, Tutorial, Virtualization
+:tags: Linux, VFIO, Tutorial, Virtualization, 100DaysToOffload
 :slug: vfio-part2
 :summary: Isolation of components for VM pass through
 :cover_image: dingle.png

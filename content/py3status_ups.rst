@@ -4,7 +4,7 @@ Creating a py3status module to monitor my UPS battery
 :author: mcgillij
 :category: Python
 :date: 2020-12-31 19:09
-:tags: UPS, Battery, Python, Tutorial, i3 
+:tags: UPS, Battery, Python, Tutorial, i3, 100DaysToOffload
 :slug: py3status-battery-monitor
 :summary: How to create a py3status module
 :cover_image: battery.jpg

@@ -8,7 +8,22 @@ SITETITLE = "Dev Oops"
 
 PLUGIN_PATHS = ['pelican-plugins', 'pelican-plugins/pelican_youtube']
 
-PLUGINS = ['pelican-cover-image', 'readtime', 'pelican_youtube', 'extract_toc', 'better_figures_and_images']
+PLUGINS = ['pelican-cover-image', 'readtime', 'pelican_youtube', 'extract_toc', 'better_figures_and_images', 'sitemap']
+
+SITEMAP = {
+    "exclude": ["tag/", "category/"],
+    "format": "xml",
+    "priorities": {
+        "articles": 0.5,
+        "indexes": 0.5,
+        "pages": 0.5
+    },
+    "changefreqs": {
+        "articles": "monthly",
+        "indexes": "daily",
+        "pages": "monthly"
+    }
+}
 
 RESPONSIVE_IMAGES = True
 FIGURE_NUMBERS = True

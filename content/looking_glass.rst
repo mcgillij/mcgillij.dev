@@ -4,7 +4,7 @@ Looking Glass
 :author: mcgillij
 :category: Virtualization
 :date: 2020-12-30 22:32
-:tags: Linux, VFIO, Virtualization, Tutorial, BIOS, LookingGlass
+:tags: Linux, VFIO, Virtualization, Tutorial, BIOS, LookingGlass, 100DaysToOffload
 :slug: looking-glass-vfio
 :cover_image: lg.png
 :summary: Basic Looking Glass setup

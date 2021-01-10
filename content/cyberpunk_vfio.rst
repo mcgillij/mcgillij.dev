@@ -3,7 +3,7 @@ Cyberpunk 2077 in Linux kinda?
 
 :category: Games
 :author: mcgillij
-:tags: Linux, Cyberpunk, 2077, VFIO, games, demo
+:tags: Linux, Cyberpunk, 2077, VFIO, games, demo, 100DaysToOffload
 :date: 2020-12-29 19:47
 :cover_image: cyberpunk.jpg
 :summary: Short demo video of VFIO setup playing Cyberpunk

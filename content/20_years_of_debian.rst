@@ -4,7 +4,7 @@ Installing Arch Linux blind after 20 years of Debian
 :author: mcgillij
 :category: Linux
 :date: 2021-01-01 16:49
-:tags: Linux, Debian, Arch
+:tags: Linux, Debian, Arch, 100DaysToOffload
 :slug: arch-after-debian-part1
 :summary: Some thoughts about Arch and Debian after 20 years of using primarily Debian
 :cover_image: arch.png
