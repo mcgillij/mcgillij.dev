@@ -7,7 +7,7 @@
                 <div class="grid grid-pad">
                     <div class="col-8-12">
                         <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
-                        <small>published on {{ article.date.strftime('%d/%m/%Y') }}</small>
+                        published on 📅 {{ article.date.strftime('%d/%m/%Y') }}
                         <small>| tags : </small>{% for tag in article.tags %}
                             {% if loop.last %}
                                 <span class="tag"><a href="{{ SITEURL}}/{{ tag.url }}">{{ tag }}</a></span>
@@ -15,7 +15,7 @@
                                <span class="tag"><a href="{{ SITEURL}}/{{ tag.url }}">{{ tag }}</a>,</span>
                             {% endif %}
                         {% endfor %}
-			{{ article.summary }}
+                        {{ article.summary }}
                     </div>
                     <div class="col-4-12">
                         <img src="{{ SITEURL }}/icons/{{ article.category }}.png">

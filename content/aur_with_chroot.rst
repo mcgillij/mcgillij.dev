@@ -4,7 +4,7 @@ Building AUR's with a chroot
 :author: mcgillij
 :category: Linux
 :date: 2021-01-09 16:49
-:tags: Linux
+:tags: Linux, Arch, pacman, 100DaysToOffload
 :slug: aur-with-chroot
 :summary: How to build AUR's with a chroot cleanly
 :cover_image: package.jpg

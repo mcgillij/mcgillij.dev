@@ -1,6 +1,6 @@
 VFIO Resources
 ##############
-:author: Jason McGillivray
+:author: mcgillij
 :cover_image: links.jpg
 
 Just a few links that helped me along the way with my VFIO setup, hopefully they can help someone else as well.
