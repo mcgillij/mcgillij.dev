@@ -5,7 +5,7 @@ Intro to VFIO
 :author: mcgillij 
 :category: Linux
 :date: 2020-12-25 14:49
-:tags: Linux, VFIO, Vitualization, Tutorial, 100DaysToOffload
+:tags: Linux, VFIO, Vitualization, Tutorial, #100DaysToOffload
 :slug: vfio-part1
 :summary: Intro to VFIO in Linux
 :cover_image: vfio_header.png

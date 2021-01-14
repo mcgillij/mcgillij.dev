@@ -4,7 +4,7 @@ Odds and Ends
 :author: mcgillij
 :category: Linux
 :date: 2020-12-28 14:52
-:tags: Linux, VFIO, Virtualization, Tutorial, BIOS, 100DaysToOffload
+:tags: Linux, VFIO, Virtualization, Tutorial, BIOS, #100DaysToOffload
 :slug: vfio-part4
 :cover_image: oddsandends.jpg
 :summary: BIOS and optimizations

@@ -4,7 +4,7 @@ The Machine! (virtual)
 :author: mcgillij 
 :category: Linux
 :date: 2020-12-27 14:51
-:tags: Linux, VFIO, Tutorial, Virtualization , 100DaysToOffload
+:tags: Linux, VFIO, Tutorial, Virtualization , #100DaysToOffload
 :slug: vfio-part3
 :summary: Configuring your VM
 :cover_image: machine.jpg

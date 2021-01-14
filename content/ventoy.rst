@@ -5,7 +5,7 @@ Ventoy how did I not know about you?
 :author: mcgillij 
 :category: Linux
 :date: 2021-01-03 17:01
-:tags: Linux, tutorial, 100DaysToOffload
+:tags: Linux, tutorial, #100DaysToOffload
 :slug: ventoy
 :summary: Neat tool that I didn't know about for bootable media
 :cover_image: usbkey.jpg

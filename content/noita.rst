@@ -4,7 +4,7 @@ Wizards and State Machines
 :author: mcgillij
 :category: Games
 :date: 2021-01-12 19:11
-:tags: Noita, State Machine, Games, Wizard, Witch, Spell Wrapping
+:tags: Noita, State Machine, Games, Wizard, Witch, Spell Wrapping, #100DaysToOffload
 :slug: wizards-and-state-machines
 :summary: Noita, the best Witch game you haven't played.
 :cover_image: noita.png

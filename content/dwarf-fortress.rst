@@ -4,7 +4,7 @@ Dwarf Fortress in Arch with a Tile-set
 :author: mcgillij
 :category: Games
 :date: 2021-01-11 17:49
-:tags: Linux, Arch, Dwarf Fortress, Graphics
+:tags: Linux, Arch, Dwarf Fortress, Graphics, #100DaysToOffload
 :slug: dwarf-fortress-in-arch
 :summary:  Small write-up of how to install a tile-set for Dwarf Fortress in Linux (Arch, but any other distribution will work as well).
 :cover_image: df.png

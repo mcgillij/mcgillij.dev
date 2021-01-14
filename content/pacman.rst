@@ -4,7 +4,7 @@ pacman coming from apt / dpkg
 :author: mcgillij
 :category: Linux
 :date: 2021-01-07 19:49
-:tags: Linux, Arch, Debian, pacman, 100DaysToOffload
+:tags: Linux, Arch, Debian, pacman, #100DaysToOffload
 :slug: pacman
 :summary: Working with the Arch Linux package manager
 :cover_image: pacman.jpg

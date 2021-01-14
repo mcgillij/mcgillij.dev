@@ -5,7 +5,7 @@ ssh-copy-id
 :author: mcgillij
 :category: Linux
 :date: 2021-01-04 14:49
-:tags: Linux, SSH, 100DaysToOffload
+:tags: Linux, SSH, #100DaysToOffload
 :slug: ssh-copy-id
 :summary: More commands that I didn't know about
 :cover_image: encryption.png

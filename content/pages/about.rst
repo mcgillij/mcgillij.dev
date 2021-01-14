@@ -1,7 +1,7 @@
 About Me
 ########
 :author: mcgillij
-:cover_image: atyia.jpg
+:cover_image: atiya.jpg
 
 Like other blogs, I guess I'll put up an about page. I'm a old school hacker living in Halifax. I've been using Linux primarily for work and at home for close to 25 years now.
 
