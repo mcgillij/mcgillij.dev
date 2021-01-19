@@ -74,11 +74,11 @@ LINKS = (('Kernel', 'https://kernel.org'),
          )
 
 # Social widget
-SOCIAL = (('Github.com', 'https://github.com/mcgillij'),
+SOCIAL = (('github', 'https://github.com/mcgillij'),
         ('lbry.tv', 'https://open.lbry.com/@mcgillij:f?r=DcVSfrqSrfbxDMVcaiRsthz175SnhYCg'),
         ('youtube', 'https://www.youtube.com/channel/UCXkxlvkM2X2CMlf4fc0djOg'),
         ('@mcgillij', 'https://fosstodon.org/@mcgillij'),
-        ('KeyOxide', 'https://keyoxide.org/hkp/mcgillivray.jason@gmail.com'),
+        ('keyoxide', 'https://keyoxide.org/hkp/mcgillivray.jason@gmail.com'),
            ('Atom/RSS', '/feeds/all.atom.xml'),
           )
 
