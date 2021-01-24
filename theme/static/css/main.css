@@ -1,11 +1,11 @@
 body {
-    background-color: #252833;
-    color: white;
+    background-color: #2E3440;
+    color: #4c566a;
 }
 
 a {
     text-decoration: none;
-    color: #1E67CE;
+    color: #5e81ac;
 }
 
 strong {
@@ -14,7 +14,7 @@ strong {
 
 a:visited {
     text-decoration: none;
-    color: #1E67CE;
+    color: #b48ead;
 }
 
 a:hover {
@@ -22,7 +22,7 @@ a:hover {
 }
 
 .header {
-    background-color: #2B3844;
+    background-color: #4c566a;
 
     font-size: 1.143em;
     border-radius: 5px;
@@ -45,7 +45,7 @@ a:hover {
 
 #navigation li a {
     text-decoration: none;
-    color: white;
+    color: #eceff4;
     padding: 15px;
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -53,8 +53,8 @@ a:hover {
 }
 
 #navigation li a:hover{
-    background-color: #476684;
-    color: white;
+    background-color: #a3be8c;
+    color: #2e3440;
 }
 
 .group {
@@ -81,15 +81,15 @@ a:hover {
 }
 
 .widget {
-    background-color: #22242E;
-    padding:10px;
+    background-color: #d8dee9;
+    padding:5px;
     border-radius: 10px;
     margin-bottom: 20px;
 }
 
 .article-index {
     padding-bottom: 10px;
-    background-color: #22242E;
+    background-color: #d8dee9;
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -103,7 +103,7 @@ a:hover {
 
 .article-index a {
     text-decoration: none;
-    color: #1E67CE;
+    color: #434c5e;
 }
 
 .article-index a:hover{
@@ -124,7 +124,7 @@ a:hover {
 }
 
 .footer {
-    background-color: #2B3844;
+    background-color: #3b4252;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
@@ -138,13 +138,13 @@ a:hover {
 
 .label {
     margin-left: 20px;
-    background-color: #414C57;
+    background-color: #d8dee9;
     padding:7px;
     border-radius: 25px;
 }
 
 .cat-link {
-    border-bottom: 1px dashed #414C57;
+    border-bottom: 1px dashed #a3be8c;
     padding-bottom:5px;
     padding-top: 5px;
 }
@@ -152,7 +152,7 @@ a:hover {
 .article {
     font-size: 20px;
     padding: 20px;
-    background-color: #22242E;
+    background-color: #d8dee9;
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -163,11 +163,11 @@ a:hover {
 }
 
 .article-content {
-    color: #fff;
+    color: #4c566a;
 }
 
 .article-content h2 {
-    color: #AA7A32;
+    color: #88c0d0;
 }
 
 .highlight {

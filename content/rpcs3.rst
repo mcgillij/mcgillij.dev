@@ -6,7 +6,7 @@ Demon's Souls / RPCS3
 :date: 2021-01-23 14:49
 :tags: Games, #100DaysToOffload, Emulation
 :slug: demons-souls-in-linux
-:summary: Getting Demon's Souls up and running Linux
+:summary: Getting Demon's Souls up and running in Arch Linux with RPCS3
 :cover_image: demonsouls.png
 
 .. contents::

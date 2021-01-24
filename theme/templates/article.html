@@ -49,8 +49,10 @@
 {% block side %}
     {{ super() }}
     {% if article.toc %}
+    <div class="widget">
 	<nav class="toc">
 	    {{ article.toc }}
 	</nav>
+    </div>
     {% endif %} 
 {% endblock %}
