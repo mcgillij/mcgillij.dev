@@ -174,3 +174,9 @@ a:hover {
     padding: 10px;
     border-radius: 10px;
 }
+
+table { margin-bottom: 25px; width: 100; text-align: left; color: #3b4252; border-collapse: collapse; border: 1px solid #4c566a; }
+table tr:nth-child(even) { background-color: #eceff4; }
+table th, table td { padding: 9px 12.5px; }
+table th { background-color: #e5e9f0; border: 1px solid #4c566a; }
+table td { border: 1px solid #4c566a; }
