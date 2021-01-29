@@ -1,7 +1,7 @@
 Misc
 ###################
 :author: mcgillij
-:cover image: cpu_cover.png
+:cover_image: cpu_cover.png
 
 The hardward and software I use everyday.
 
