@@ -184,6 +184,8 @@ The above code just looks like a hot mess of coordinates, and that's exactly wha
 
 By just looking left/right and below the selected pixel, we can determine where we want to move our materials to.
 
+Our **physics** function above, will loop over our entire array of pixels passing in their X and Y coords to our various material functions and move each of the pixels if required.
+
 Step 5 profit?
 **************
 
