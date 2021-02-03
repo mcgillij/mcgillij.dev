@@ -8,7 +8,7 @@ SITETITLE = "Dev Oops"
 
 PLUGIN_PATHS = ['pelican-plugins', 'pelican-plugins/pelican_youtube']
 
-PLUGINS = ['pelican-cover-image', 'readtime', 'pelican_youtube', 'extract_toc', 'better_figures_and_images', 'sitemap']
+PLUGINS = ['pelican-cover-image', 'readtime', 'pelican_youtube', 'extract_toc', 'better_figures_and_images', 'sitemap', 'better_tables', 'css-html-js-minify', 'optimize_images']
 
 SITEMAP = {
     "exclude": ["tag/", "category/"],
