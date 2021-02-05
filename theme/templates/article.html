@@ -27,22 +27,6 @@
             {{ article.content }}
         </div>
     </div>
-<div id="disqus_thread"></div>
-<script>
-
-    var disqus_config = function () {
-		    this.page.url = "{{ SITEURL }}/{{ article.url }}";
-		    this.page.identifier = "{{ SITEURL }}/{{ article.title }}";
-    this.page.title = "{{ article.title }}";
-    };
-
-    (function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://mcgillij-dev.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
 
 {% endblock %}
 
