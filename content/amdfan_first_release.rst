@@ -26,7 +26,7 @@ Improvements
 - monitor the fan speeds
 - monitor GPU temperatures
 - allow manual fan speed
-- adjustable freqency
+- adjustable frequency
 - adjustable temperature threshold
 - security fixes
 - broken functionality addressed, now able to set system controlled fans
