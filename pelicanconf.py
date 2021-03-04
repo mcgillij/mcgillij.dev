@@ -6,9 +6,48 @@ SITENAME = "Dev Oops"
 SITEURL = 'https://mcgillij.dev'
 SITETITLE = "Dev Oops"
 
-PLUGIN_PATHS = ['pelican-plugins', 'pelican-plugins/pelican_youtube']
+PLUGIN_PATHS = ['pelican-plugins']
 
-PLUGINS = ['pelican-cover-image', 'readtime', 'pelican_youtube', 'extract_toc', 'better_figures_and_images', 'sitemap', 'better_tables', 'css-html-js-minify', 'optimize_images']
+PLUGINS = [
+    'pelican-cover-image',
+    'readtime',
+    'pelican_youtube',
+    'extract_toc',
+    'better_figures_and_images',
+    'sitemap',
+    'better_tables',
+    'css-html-js-minify',
+#    'optimize_images',  # mega slow single threaded or something
+    'image_process'
+]
+
+
+IMAGE_PROCESS = {
+    "crisp": {
+        "type": "responsive-image",
+        "srcset": [
+            ("1x", ["scale_in 800 600 True"]),
+            ("2x", ["scale_in 1600 1200 True"]),
+            ("4x", ["scale_in 3200 2400 True"]),
+        ],
+        "default": "1x",
+    },
+    "large-photo": {
+        "type": "responsive-image",
+        "sizes": (
+            "(min-width: 1200px) 800px, "
+            "(min-width: 992px) 650px, "
+            "(min-width: 768px) 718px, "
+            "100vw"
+        ),
+        "srcset": [
+            ("600w", ["scale_in 600 450 True"]),
+            ("800w", ["scale_in 800 600 True"]),
+            ("1600w", ["scale_in 1600 1200 True"]),
+        ],
+        "default": "800w",
+    },
+}
 
 SITEMAP = {
     "exclude": ["tag/", "category/"],
