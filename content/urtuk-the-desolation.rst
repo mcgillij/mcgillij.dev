@@ -119,12 +119,16 @@ Since this is mostly a game about doing battle against and with weird monstrosit
    :class: image-process-large-photo
    :alt: battle picture from urtuk
 
-Classes
-*******
+Classes / Party
+***************
 
-I started with a **priest** as Urtuk, a berzerker and a monk. My monk promptly got killed off, but I managed to replace quite easily.
+I started with a **priest** as Urtuk, a berzerker and a monk. My monk promptly got killed off, but I managed to replace him after a short while.
 
 The classes are all quite interesting, some functioning essentially like you would imagine if you were reading right out of a DND manual, while others are quite surprising.
+
+You also can recruit enemy's to fight for you, so you can have vampires, werebeasts and scavengers fighting along side you as well.
+
+Your party has a limit of **6** members that can go into battle with you. However you can have others in reserve in the event that some are hurt and you want to sub them out.
 
 Momentum
 ********
@@ -134,10 +138,12 @@ Battles in Urtuk are highly momentum based (at least for me since my main charac
 My priest for instance, can't actually just heal someone. 
 
 He can hurt himself to:
+
 - give himself or others a **lifesteal** effect on their next attack
 - give an **aegis** that blocks 1 hit of damage
 
 At a glance, this is terrible.
+
 - no *direct* heals
 - all his moves hurt him... 
 - he's my main character and if he dies it's **game over**
@@ -154,9 +160,9 @@ This game has a Linux native client, and it runs flawless, I haven't had any cra
 One complaint
 *************
 
-And it's minor, and I can work around it no problem. However it's a bit annoying. This game doesn't actually seem to "support" my native resolution of **5120x1400**. I can full screen the game, which offsets the UI quite a bit in the title screen, and it works once in battle. But that would be my only complaint so far.
+And it's minor, and I can work around it no problem. However it's a bit annoying. This game doesn't actually seem to "support" my native resolution of **5120x1400**. I can full screen the game, which offsets the UI quite a bit in the title screen, and it works once in battle. But that would be my only complaint so far. Did I mention the Linux port works amazingly well. (Running Arch btw)
 
 Conclusion
 **********
 
-If you like XCOM, Darkess Dungeon, Old Battletech tabletop, or are just fond of hex's. This games super worth it. I'm really enjoying it. And I very much like not having to fire up a VM to play it since it's got a native linux port.
+If you like *XCOM, Darkest Dungeon, Old Battletech tabletop*, or are just fond of hex's. This games super worth it. I'm really enjoying it. And I very much like not having to fire up a VM to play it since it's got a native Linux port.
