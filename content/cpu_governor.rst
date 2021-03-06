@@ -82,4 +82,4 @@ That's it, restart your i3 session and you should be able to see your cpu govern
 Source
 ******
 
-The source is also `available on github <https://github.com/mcgillij/cpu_governor>`_ if you don't want to copy / paste from a webpage.
+The source is also `available on github <https://github.com/mcgillij/py3status-cpu-governor>`_ if you don't want to copy / paste from a webpage.

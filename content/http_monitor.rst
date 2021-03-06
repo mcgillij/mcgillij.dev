@@ -18,7 +18,7 @@ A small script written to monitor some services running on my server. The goal w
 Where to download
 *****************
 
-The script is available on `github <https://github.com/mcgillij/http_monitor>`_ along with the installation directions.
+The script is available on `github <https://github.com/mcgillij/py3status-http-monitor>`_ along with the installation directions.
 
 Screenshot
 **********

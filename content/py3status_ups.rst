@@ -187,7 +187,7 @@ Restarting *i3* now will essentially give us a placeholder where our module shou
 Writing the module
 ******************
 
-In ``.i3/py3status/`` create a file called **battery_status.py** as py3status checks that directory for custom modules on startup. Or you can fetch the file from my `Github account <https://github.com/mcgillij/UPS_Battery_Monitor>`_.
+In ``.i3/py3status/`` create a file called **battery_status.py** as py3status checks that directory for custom modules on startup. Or you can fetch the file from my `Github account <https://github.com/mcgillij/py3status-ups-battery-monitor>`_.
 
 The contents of the file is pretty simple, and there's lots of room for improvements should you want to add some runtime configuration or more statistics, but for my purpose I just wanted to get the status onto my desktop.
 
