@@ -169,7 +169,7 @@ and replace it with
 
 By default *py3status* will use the default **i3status.conf**. So we can edit it and add a section for our custom python module.
 
-I'm calling my python module **battery_status** since there was already a module named battery in there that seems to be for laptops.
+I'm calling my python module **ups_battery_status** since there was already a module named battery in there that seems to be for laptops.
 
 Adding my module to the **~/.config/i3/i3status.conf**
 
@@ -178,7 +178,7 @@ Adding my module to the **~/.config/i3/i3status.conf**
    ...
    order += "uptime"
    order += "arch_updates"
-   order += "battery_status" #<<<<<<<<<< Our custom module
+   order += "ups_battery_status" #<<<<<<<<<< Our custom module
    order += "volume_status"
    ...
 
@@ -187,11 +187,11 @@ Restarting *i3* now will essentially give us a placeholder where our module shou
 Writing the module
 ******************
 
-In ``.i3/py3status/`` create a file called **battery_status.py** as py3status checks that directory for custom modules on startup. Or you can fetch the file from my `Github account <https://github.com/mcgillij/py3status-ups-battery-monitor>`_.
+In ``.i3/py3status/`` create a file called **ups_battery_status.py** as py3status checks that directory for custom modules on startup. Or you can fetch the file from my `Github account <https://github.com/mcgillij/py3status-ups-battery-status>`_.
 
 The contents of the file is pretty simple, and there's lots of room for improvements should you want to add some runtime configuration or more statistics, but for my purpose I just wanted to get the status onto my desktop.
 
-**battery_status.py**
+**ups_battery_status.py**
 
 .. code-block:: python
 
@@ -216,7 +216,7 @@ The contents of the file is pretty simple, and there's lots of room for improvem
            except self.py3.CommandError as ce:
                return len(ce.output.splitlines())
 
-       def battery_status(self):
+       def ups_battery_status(self):
    
            status = self._get_battery_status()
            full_text = self.py3.safe_format(self.format, status)
