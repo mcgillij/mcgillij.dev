@@ -134,6 +134,18 @@ Arch:
 
    pacman -Q
 
+Listing optional dependencies
+*****************************
+
+Arch:
+
+.. code-block:: bash
+
+   pacman -Qi <packagname>
+
+This will display some nice package information along with the optional dependencies available for installation.
+
+
 
 Upgrading
 *********
