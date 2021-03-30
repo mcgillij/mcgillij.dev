@@ -55,7 +55,7 @@ They all loaded up correctly when loaded from PyPi or AUR. But for some reason m
 
 If I loaded up a single instance of the HTTP monitor, it would work correctly. However it's created in a way that you can call it several times for different services that you would like to monitor.
 
-.. image: {static}/images/status_bar.png
+.. image:: {static}/images/status_bar.png
    :alt: Image of the http monitor.
 
 Digging deeper (And why I love open source)
