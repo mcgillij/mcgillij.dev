@@ -81,7 +81,7 @@ Fast forward to the next Py3status release
 
 So a couple days ago, I ran my daily `pacman -Syu`, for those not in the know, that's a system update in the Arch world. And oh shit, new version of py3status! I wonder if it has the fix I needed. So I look at the version, hop onto Github to check the release... OK the numbers match the latest release, great. That's when I noticed it.
 
-**35 Minutes ago** the release as created.
+**35 Minutes ago** the release was created.
 
 Props to the Arch maintainers, even on Debian unstable, I'd have waited likely weeks before this would have even been built.
 
