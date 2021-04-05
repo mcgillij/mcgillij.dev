@@ -161,7 +161,7 @@ Create the following docker-compose.yml file in the same directory.
 
 *docker-compose.yml*
 
-.. code-block:: docker-compose
+.. code-block:: dockerfile
 
    version: '3'
    services:

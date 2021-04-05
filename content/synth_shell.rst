@@ -3,7 +3,7 @@ Adding Python Virtual Env support to Synth Shell
 
 :author: mcgillij
 :category: Python
-:date: 2021-02-01
+:date: 2021-02-01 20:20
 :tags: Python, Bash, Linux, #100DaysToOffload
 :slug: adding-venv-to-synth-shell
 :summary: Just a quick write up of adding Python virtualenv support to Synth Shell

@@ -1,8 +1,7 @@
 Intro to VFIO
 ####################
 
-
-:author: mcgillij 
+:author: mcgillij
 :category: Linux
 :date: 2020-12-25 14:49
 :tags: Linux, VFIO, Vitualization, Tutorial, #100DaysToOffload
