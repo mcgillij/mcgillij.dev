@@ -15,6 +15,7 @@ Pillow = "^8.0.1"
 cssutils = "^1.0.2"
 css-html-js-minify = "^2.5.5"
 lxml = "^4.6.2"
+sphinx-gemini-builder = "^1.1.1"
 
 [tool.poetry.dev-dependencies]
 
