@@ -1,3 +1,4 @@
+
 img {
     border: 1px solid #bbb;
     border-radius: 3px;
@@ -5,6 +6,11 @@ img {
     float: left;
     margin: 1em 1em 1em 0;
     box-shadow: 4px 4px 4px 0px rgba(128, 128, 128, 0.5);
+}
+
+img#title {
+    box-shadow: none;
+    border: none;
 }
 
 .figure {
