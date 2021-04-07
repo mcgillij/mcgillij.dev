@@ -231,4 +231,4 @@ If for whatever reason you want to look at the code in it's entirety for my rst2
 
 Now I can update my site by simply typing in ``gemify`` in my term anytime I want update my gemini capsule.
 
-Also I'm not sure that web browsers can render ``gemini://`` links. But if you want to check out my site in Gemini you can find it here **gemini.mcgillij.dev**.
+Also I'm not sure that web browsers can render ``gemini://`` links. But if you want to check out my site in Gemini you can find it here `gemini.mcgillij.dev <gemini://gemini.mcgillij.dev>`_.
