@@ -1,7 +1,20 @@
 {% extends "base.html" %}
 
 {% block title %}
-    {{ SITENAME }} - {{ article.title }}
+  {{ article.title }} - {{ SITENAME }}
+{% endblock %}
+
+{% block metadata %}
+<meta name='description' content='{{ article.summary }}'>
+<meta name="keywords" content="
+		{% for tag in article.tags %}
+			{% if loop.last %}
+				{{ tag }}
+			{% else %}
+				{{ tag }},
+			{% endif %}
+		{% endfor %}">
+<link rel='canonical' href='{{ SITEURL }}'>
 {% endblock %}
 
 
@@ -15,13 +28,13 @@
         <small>| tags : </small>
         {% for tag in article.tags %}
             {% if loop.last %}
-                <span class="tag"><a href="{{ SITEURL}}/{{ tag.url }}">{{ tag }}</a></span>
+                <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
             {% else %}
-                <span class="tag"><a href="{{ SITEURL}}/{{ tag.url }}">{{ tag }}</a>,</span>
+                <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>,</span>
             {% endif %}
         {% endfor %}
 	{% if article.readtime %}
-	<span><p style="text-align:right; color:#aaaaaa; ">&nbsp Estimated read time: {{article.readtime.minutes}} min.</p></span>
+	<span><p style="text-align:right; color:#aaaaaa; ">&nbsp Estimated read time: {{ article.readtime.minutes }} min.</p></span>
 	{% endif %}
         <div class="article-content">
             {{ article.content }}
@@ -38,5 +51,5 @@
 	    {{ article.toc }}
 	</nav>
     </div>
-    {% endif %} 
+    {% endif %}
 {% endblock %}

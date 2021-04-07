@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block title %}
+	{{ page.title }} - {{ SITENAME }}
+{% endblock %}
+
 
 {% block content %}
 	<img src="{{ page.cover_image_url }}" alt="Cover image">

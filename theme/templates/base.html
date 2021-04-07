@@ -1,15 +1,15 @@
 <html>
     <head>
-        <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+        <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
         <meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% block metadata %}{% endblock %}
         <link rel="stylesheet" href="/theme/css/normalize.css" />
         <link rel="stylesheet" href="/theme/css/simplegrid.css" />
         <link rel="stylesheet" href="/theme/css/pygment.css" />
         <link rel="stylesheet" href="/theme/css/main.css" />
         <link rel="stylesheet" href="/theme/css/youtube.css" />
         <link rel="stylesheet" href="/theme/css/custom.css" />
-
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6R4M5ZQHNJ"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];

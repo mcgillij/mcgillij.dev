@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+{% block metadata %}
+<meta name="description" content="Get OFF MY LAWN!, all things open source, linux and gaming related.">
+<link rel="canonical" href="{{ SITEURL }}">
+<meta name="keywords" content="Linux, OpenSource, Games, Python, Arch">
+{% endblock %}
+
 {% block content %}
     {% if articles %}
         {% for article in articles %}
