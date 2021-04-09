@@ -14,7 +14,7 @@ Noita - Linux performance
 Preface
 *******
 
-Noita devs **please release a native Linux** branch, thanks (*from all the devs who play your game*)! 
+Noita devs **please release a native Linux** branch, thanks (*from all the devs who play your game*)!
 
 OK now with that out of the way, while not **officially** supported in Linux, you do have a couple options to play Noita in Linux.
 
