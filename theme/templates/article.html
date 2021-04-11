@@ -6,8 +6,7 @@
 
 {% block metadata %}
 <meta name='description' content='{{ article.summary|striptags }}'>
-<meta name="keywords" content="
-		{% for tag in article.tags %}
+<meta name="keywords" content="{% for tag in article.tags %}
 			{% if loop.last %}
 				{{ tag }}
 			{% else %}

@@ -28,6 +28,7 @@ An list of the projects I'm working on.
       :width: 100%
 
 - `py3status-github-notifications <https://github.com/mcgillij/py3status-github-notifications>`_
+
    Show Github notifications on your py3status bar in i3wm
 
    .. image:: {static}/images/github_notifications.png
@@ -36,6 +37,14 @@ An list of the projects I'm working on.
 
    .. image:: {static}/images/notifications_red.png
       :alt: Showing when you don't have notifications
+      :width: 100%
+
+- `py3status-amdfan <https://github.com/mcgillij/py3status-amdfan>`_
+
+   Uses ``amdfan`` as a library to display temperature and fan RPM's in an i3bar with py3status
+
+   .. image:: {static}/images/py3status-amdfan.png
+      :alt: Image of py3status-amdfan
       :width: 100%
 
 - `py3status-ups-battery-status <https://github.com/mcgillij/py3status-ups-battery-status>`_
