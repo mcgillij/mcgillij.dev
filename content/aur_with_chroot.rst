@@ -66,7 +66,7 @@ Custom scripts
 .. code-block:: bash
 
    #!/bin/bash
-   makechrootpkg -c -r $HOME/$BUILD_CHROOT
+   makechrootpkg -c -r $BUILD_CHROOT
 
 
 *~/bin/install_package*
