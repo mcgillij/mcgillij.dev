@@ -78,6 +78,7 @@ An list of the projects I'm working on.
 
    .. image:: {static}/images/falling.gif
       :alt: Animation of the falling everything in python
+      :width: 100%
 
 - `gwar-bot <https://github.com/mcgillij/gwar-bot>`_
 
