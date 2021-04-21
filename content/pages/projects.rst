@@ -3,7 +3,7 @@ Projects
 :author: mcgillij
 :cover_image: cpu_cover.png
 
-An list of the projects I'm working on.
+An unsorted list of past and present projects I've worked on.
 
 - `AMDFan <https://github.com/mcgillij/amdfan>`_
 
@@ -53,6 +53,13 @@ An list of the projects I'm working on.
 
    .. image:: {static}/images/battery_status.png
       :alt: Image of the battery status
+
+- `Synth Shell <https://github.com/andresgongora/synth-shell>`_
+
+   Fancy bash prompt I use, added ``terraform workspace`` and **Python VirtualEnv** support.
+
+   .. image:: {static}/images/synthshell.jpg
+      :alt: Synthshell logo
 
 - `noita save manager <https://github.com/mcgillij/noita_save_manager>`_
 
