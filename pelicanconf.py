@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*- #
 THEME="theme"
 AUTHOR = 'Jason McGillivray'
-SITENAME = "Dev Oops"
+SITENAME = "Dev Oops - All things Arch, Debian and Python"
 SITEURL = 'https://mcgillij.dev'
-SITETITLE = "Dev Oops"
+SITETITLE = "Dev Oops - All things Arch, Debian and Python"
 
 PLUGIN_PATHS = ['pelican-plugins']
 
