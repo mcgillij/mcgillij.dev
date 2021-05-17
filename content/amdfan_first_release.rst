@@ -1,4 +1,4 @@
-AMDFAN First release
+amdfan First release
 ####################
 
 :author: mcgillij
