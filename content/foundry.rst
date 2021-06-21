@@ -1,5 +1,5 @@
-Foundry VTT setup in Linux
-##########################
+Foundry setup in Linux
+######################
 
 :author: mcgillij
 :category: Dice
