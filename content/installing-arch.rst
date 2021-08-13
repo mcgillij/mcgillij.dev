@@ -19,7 +19,7 @@ This is not a replacement for the `installation wiki <https://wiki.archlinux.org
 Who is this for?
 ^^^^^^^^^^^^^^^^
 
-Anyone interested in a modern Linux desktop environment, playing games in Linux, virtual machines and developers etc...
+Anyone interested in a modern Linux desktop environment, playing games in Linux(SteamOS / Steam Deck!!! But on desktop?), virtual machines and developers etc...
 
 What makes Arch different?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -69,6 +69,7 @@ root@archiso ~ #
 ^^^^^^^^^^^^^^^^
 
 .. image:: {static}/images/arch_root.png
+   :alt: arch_root
 
 Ok so now assuming you have internet access you can acccess the installation wiki by typing in **installation_guide** and reading along. You are now in whats commonly referred to as the 'live' (on usb, cd or ram) environment. From here we will be provisioning our system to run Arch Linux.
 
@@ -329,13 +330,9 @@ Reboot and your running Arch.
 
 You may be asking, where's my *graphix*, well now you get to choose which Desktop environment, Window manager and login manager if any that you want to use. What we have here is called **bare bones** system. From here you could run a minimalistic server configuration, create a cloud image, setup a gaming machine or all of the above.
 
-Generally you don't get to make these decisions when installing other distro's, and this is the reason I recommend having an opinion on you want to be running prior to installing Arch. While it is possible to install just about every DE / WM available out of the box, it's nice to actually get to choose which one you want to run rather than leaving that decision upto the distribution maintainers that may have been trying to solve different problems than you.
+Generally you don't get to make these decisions when installing other distro's, and this is the reason I recommend having an opinion or goals prior to installing Arch.
 
-Maybe I'll make another article on what things I generally do after installation.
-
-But I'll leave you with this. Learn to use **pacman** since it's Arch's package manager, and it does a great job of resolving all the dependencies between packages.
-
-Here's a few packages I recommend installing: `lightdm, i3, alacritty, py3status, firefox, flameshot, strawberry, steam` these should all be available using pacman.
+While it is possible to install just about every DE / WM available out of the box, it's nice to actually get to choose which one you want to run rather than leaving that decision upto the distribution maintainers that may have been trying to solve different problems than you.
 
 My installed packages
 *********************
@@ -548,5 +545,7 @@ I generated this list with **pacman -Qqe**
    xorg-xkill
    xorg-xrandr
    zip
+
+But I'll leave you with this. Learn to use **pacman** since it's Arch's package manager, and it does a great job of resolving all the dependencies between packages.
 
 Let me know what you install!
