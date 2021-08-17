@@ -34,6 +34,8 @@ What does this mean practically? You will *need* to have actual opinions about h
 
 - **AUR**'s (`Arch User Repositories <https://aur.archlinux.org/>`_) are another incredible thing in the Arch world bridging the gap for installing projects not in the main archives.
 
+- Documentation, their `Wiki <https://wiki.archlinux.org/>`_ is a tremendous resource that only Gentoo comes close to.
+
 New to Linux? Should you install Arch?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
