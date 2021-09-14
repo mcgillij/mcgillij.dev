@@ -7,7 +7,7 @@ Ploopy! New gear GET!
 :tags: Hardware, Opensource, Ploopy, Trackball, 3D-Print, #100DaysToOffload
 :slug: ploopy-classic-build
 :summary: WTF is a Ploopy? Opensource Trackball that runs QMK!
-:cover_image: ploopy_nano.png
+:cover_image: ploopy_nano.jpg
 
 .. contents::
 
