@@ -1,5 +1,5 @@
-Ploopy! New gear GET!
-#####################
+New Gear Get - Ploopy Classic
+#############################
 
 :author: mcgillij
 :category: Hardware
