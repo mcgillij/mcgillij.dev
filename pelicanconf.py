@@ -117,6 +117,7 @@ SOCIAL = (('github', 'https://github.com/mcgillij'),
         ('gemini capsule', 'gemini://gemini.mcgillij.dev'),
         ('@mcgillij', 'https://fosstodon.org/@mcgillij'),
         ('keyoxide', 'https://keyoxide.org/hkp/mcgillivray.jason@gmail.com'),
+        ('owncast', 'https://live.mcgillij.dev'),
            ('Atom/RSS', '/feeds/all.atom.xml'),
           )
 
