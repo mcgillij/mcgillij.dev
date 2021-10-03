@@ -118,6 +118,7 @@ SOCIAL = (('github', 'https://github.com/mcgillij'),
         ('@mcgillij', 'https://fosstodon.org/@mcgillij'),
         ('keyoxide', 'https://keyoxide.org/hkp/mcgillivray.jason@gmail.com'),
         ('owncast', 'https://live.mcgillij.dev'),
+        ('CV/Resume', 'https://github.com/mcgillij/resume/blob/master/j_resume.pdf'),
            ('Atom/RSS', '/feeds/all.atom.xml'),
           )
 

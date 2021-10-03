@@ -97,13 +97,13 @@ Note: that your disk will likely be named: ``/dev/sd*`` or ``/dev/nvme``, mine i
 Partitioning
 %%%%%%%%%%%%
 
-Unless you have a specific use-case, you can just use a pretty generic parititioning scheme that I will outline below.
+Unless you have a specific use-case, you can just use a pretty generic partitioning scheme that I will outline below.
 
 You will *need* a ``/boot`` (optional if your system will only have Linux installed), ``/`` (root) and ``swap`` partition at the very least. You may also want ``/var``, ``/tmp`` and ``/home`` on their own partitions.
 
 As a minimum, you will want to have at least **256MB** for your ``boot`` partition, **512MB** for your ``swap`` and the rest of your disk for your ``/`` (root).
 
-**cfdisk** and **fdisk** are available for your partitioning needs, use whichever you like. I'll show some screenshots of the parititon process with **cfdisk** since I generally just use that.
+**cfdisk** and **fdisk** are available for your partitioning needs, use whichever you like. I'll show some screenshots of the partition process with **cfdisk** since I generally just use that.
 
 .. code-block:: bash
 
@@ -124,7 +124,7 @@ Once you've got those created, select "Write", and then "Quit" and we can move o
 .. image:: {static}/images/arch_cfdisk3.png
    :alt: partitioned
 
-Lets run **lsblk** again to see our paritions.
+Lets run **lsblk** again to see our partitions.
 
 .. image:: {static}/images/arch_lsblk.png
    :alt: lsblk showing new partitions
@@ -152,7 +152,7 @@ And finally our ``/`` (root).
 
    mkfs.ext4
 
-OK, with the parititions made, we just need to *turn on* the swap and we are ready to mount them for installation.
+OK, with the partitions made, we just need to *turn on* the swap and we are ready to mount them for installation.
 
 .. code-block:: bash
 
