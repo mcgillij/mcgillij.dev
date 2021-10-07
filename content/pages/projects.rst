@@ -99,6 +99,10 @@ An unsorted list of past and present projects I've worked on.
 
    QT5 RSS feed reader
 
+   .. image:: https://raw.githubusercontent.com/mcgillij/PyFeed/master/PyFeed.png
+      :alt: image of PyFeed in action!
+      :width: 100%
+
 - `FeedPy <https://github.com/mcgillij/FeedPy>`_
 
    QT4 RSS feed reader
