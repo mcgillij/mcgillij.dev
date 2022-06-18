@@ -54,7 +54,7 @@ Finally with the dependencies installed we can proceed to install `fzf` with you
 
    $ yay -S fzf
 
-Configure add completion and bonus functions to your **~/.bashrc**
+Configure **fzf**, add completion and bonus functions to your **~/.bashrc**
 
 .. code-block:: bash
 

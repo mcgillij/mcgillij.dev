@@ -11,7 +11,6 @@ Elden Ring on Linux (offline mode)
 
 .. contents::
 
-
 Launch day for Elden Ring! It's out and finally unlocked and playable in Linux
 day one (with the caveat that only offline mode works due to the garbage software
 that is EAC).
