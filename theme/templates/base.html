@@ -2,39 +2,39 @@
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
-	{% block metadata %}{% endblock %}
+        {% block metadata %}{% endblock %}
         <link rel="stylesheet" href="/theme/css/normalize.css" />
         <link rel="stylesheet" href="/theme/css/simplegrid.css" />
         <link rel="stylesheet" href="/theme/css/pygment.css" />
         <link rel="stylesheet" href="/theme/css/main.css" />
         <link rel="stylesheet" href="/theme/css/youtube.css" />
         <link rel="stylesheet" href="/theme/css/custom.css" />
-	<link rel="icon" href="/favicon.ico">
-	<meta name="theme-color" content="#282a36">
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6R4M5ZQHNJ"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+        <link rel="icon" href="/favicon.ico">
+        <meta name="theme-color" content="#282a36">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6R4M5ZQHNJ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-	  gtag('config', 'G-6R4M5ZQHNJ');
-	</script>
+            gtag('config', 'G-6R4M5ZQHNJ');
+        </script>
     </head>
 
     <body>
         <header class="grid grid-pad">
             <div class="col-1-1 header">
                 {% block header %}
-			<a href="/"><img id='title' src="/images/devoops_title.png" alt='devoops'></img></a>
-                    <ul id="navigation">
-                        {% if DISPLAY_PAGES_ON_MENU %}
-                            {% for page in pages %}
-                                <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-                            {% endfor %}
-                        {% endif %}
-                    </ul>
+                <a href="/"><img id='title' src="/images/devoops_title.png" alt='devoops'></img></a>
+                <ul id="navigation">
+                    {% if DISPLAY_PAGES_ON_MENU %}
+                    {% for page in pages %}
+                    <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                    {% endfor %}
+                    {% endif %}
+                </ul>
                 {% endblock %}
             </div>
         </header>
@@ -42,49 +42,50 @@
         <div class="grid grid-pad">
             <section class="col-10-12" id="content">
                 {% block content %}{% endblock %}
+                {% block comments %}{% endblock %}
             </section>
 
             <aside class="col-2-12" id="side">
                 {% block side %}
-                    {% if categories %}
-                        <div class="widget cat">
-                            <h2>Categories</h2>
-                            {% for cat, null in categories %}
-                                <div class="cat-link">
-                                    <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.name }}</a>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
+                {% if categories %}
+                <div class="widget cat">
+                    <h2>Categories</h2>
+                    {% for cat, null in categories %}
+                    <div class="cat-link">
+                        <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.name }}</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
 
-                    {% if LINKS %}
-                        <div class="widget">
-                            <h2>Links</h2>
-                            {% for name, url in LINKS %}
-                                <div class="cat-link">
-                                    <a href="{{ url }}">{{ name }}</a>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
+                {% if LINKS %}
+                <div class="widget">
+                    <h2>Links</h2>
+                    {% for name, url in LINKS %}
+                    <div class="cat-link">
+                        <a href="{{ url }}">{{ name }}</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
 
-                    {% if SOCIAL %}
-                        <div class="widget">
-                            <h2>Personal</h2>
-                            {% for name, url in SOCIAL %}
-                                <div class="cat-link">
-                                    <a rel="me" href="{{ url }}">{{ name }}</a>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
+                {% if SOCIAL %}
+                <div class="widget">
+                    <h2>Personal</h2>
+                    {% for name, url in SOCIAL %}
+                    <div class="cat-link">
+                        <a rel="me" href="{{ url }}">{{ name }}</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
 
 
                 {% endblock %}
             </aside>
         </div>
-	<footer>
-		<a href="https://512kb.club"><img src="https://512kb.club/images/blue-team.svg" /></a>
-	</footer>
+        <footer>
+            <a href="https://512kb.club"><img src="https://512kb.club/images/blue-team.svg" /></a>
+        </footer>
     </body>
 </html>

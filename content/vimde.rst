@@ -1,5 +1,5 @@
-vImDE - NeoVim IDE
-##################
+vImDE - NeoVim Integrated Development Environment
+#################################################
 
 
 :author: mcgillij
