@@ -29,7 +29,9 @@
 
 {% block content %}
 <div class="article">
-    <img src="{{ article.cover_image_url }}" alt="Cover image">
+    <div class="cover">
+        <img src="{{ article.cover_image_url }}" alt="Cover image">
+    </div>
     <h1>{{ article.title }}</h1>
     <small>published {{ article.date.strftime('%d/%m/%Y') }} in <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></small>
     <small>| tags : </small>

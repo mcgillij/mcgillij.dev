@@ -31,6 +31,11 @@ a:hover {
     padding: 15px 0 15px 0;
 }
 
+.cover img {
+    max-width:800px;
+    height: auto;
+}
+
 #navigation {
     list-style: none;
     margin: 0 auto;
@@ -85,6 +90,11 @@ a:hover {
     padding:5px;
     border-radius: 10px;
     margin-bottom: 20px;
+}
+
+.article img {
+    max-width:800px;
+    height: auto;
 }
 
 .article-index {
