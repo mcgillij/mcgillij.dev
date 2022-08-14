@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "main.html" %}
 
 {% block metadata %}
 <meta name="description" content="Random things open source, Linux and gaming. Tutorials, advice, work-arounds and projects updates that I'm working on with a focus on Debian and Arch Linux.">
@@ -20,27 +20,57 @@
 {% endblock %}
 
 {% block content %}
-    {% if articles %}
-        {% for article in articles %}
-            <div class="article-index">
-                <div class="grid grid-pad">
-                    <div class="col-8-12">
-                        <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
-                        published on 📅 {{ article.date.strftime('%d/%m/%Y') }}
-                        <small>| tags : </small>{% for tag in article.tags %}
-                            {% if loop.last %}
-                                <span class="tag"><a href="{{ SITEURL}}/{{ tag.url }}">{{ tag }}</a></span>
-                            {% else %}
-                               <span class="tag"><a href="{{ SITEURL}}/{{ tag.url }}">{{ tag }}</a>,</span>
-                            {% endif %}
-                        {% endfor %}
-                        {{ article.summary }}
-                    </div>
-                    <div class="col-4-12">
-                        <img src="{{ SITEURL }}/icons/{{ article.category }}.png">
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
-    {% endif %}
+<h1>Welcome to my corner of the internet</h1>
+Enjoy your stay! You can find all the things I'm working on with regards to:
+
+<ul>
+    <li>open source</li>
+    <li>hiking</li>
+    <li>travel</li>
+    <li>guitars, amps and effects</li>
+    <li>overlanding</li>
+    <li>drones</li>
+    <li>gaming (in linux and steamdeck)</li>
+    <li>Atiya my dog</li>
+</ul>
+
+<hr>
+
+<H1>Latest Blog Posts</H1>
+{% if articles %}
+{% for article in articles[:5] %}
+<div class="article-index">
+    <div class="grid grid-pad">
+        <div class="col-8-12">
+            <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+            published on 📅 {{ article.date.strftime('%d/%m/%Y') }}
+            {{ article.summary }}
+            <small>| tags : </small>{% for tag in article.tags %}
+            {% if loop.last %}
+            <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
+            {% else %}
+            <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>,</span>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+
+<hr>
+<h2>Tag Cloud</h2>
+<hr>
+<ul class="tagcloud">
+    {% for tag in tag_cloud %}
+    <li class="tag-{{ tag.1 }}">
+        <a href="{{ SITEURL }}/{{ tag.0.url }}">
+            {{ tag.0 }}
+            {% if TAG_CLOUD_BADGE %}
+            <span class="badge">{{ tag.2 }}</span>
+            {% endif %}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
 {% endblock %}

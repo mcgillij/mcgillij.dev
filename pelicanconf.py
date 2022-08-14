@@ -17,10 +17,13 @@ PLUGINS = [
     'sitemap',
     'better_tables',
     'css-html-js-minify',
+    'tag_cloud',
 #    'optimize_images',  # mega slow single threaded or something
     'image_process'
 ]
 
+# tag tag_cloud configuration
+TAG_CLOUD_MAX_ITEMS = 25
 
 IMAGE_PROCESS = {
     "crisp": {
@@ -113,13 +116,14 @@ LINKS = (('Kernel', 'https://kernel.org'),
          )
 
 # Social widget
-SOCIAL = (('github', 'https://github.com/mcgillij'),
-        ('gemini capsule', 'gemini://gemini.mcgillij.dev'),
-        ('@mcgillij', 'https://fosstodon.org/@mcgillij'),
-        ('keyoxide', 'https://keyoxide.org/hkp/mcgillivray.jason@gmail.com'),
-        ('owncast', 'https://live.mcgillij.dev'),
-        ('CV/Resume', 'https://github.com/mcgillij/resume/blob/master/j_resume.pdf'),
-           ('Atom/RSS', '/feeds/all.atom.xml'),
+SOCIAL = (
+        ('🐙 github', 'https://github.com/mcgillij'),
+        ('♊︎ gemini capsule', 'gemini://gemini.mcgillij.dev'),
+        ('🐘 @mcgillij', 'https://fosstodon.org/@mcgillij'),
+        ('🔐 keyoxide', 'https://keyoxide.org/hkp/mcgillivray.jason@gmail.com'),
+        ('🌎 owncast', 'https://live.mcgillij.dev'),
+        ('📄 CV/Resume', 'https://github.com/mcgillij/resume/blob/master/j_resume.pdf'),
+        ('📫 Atom/RSS', '/feeds/all.atom.xml'),
           )
 
 DEFAULT_PAGINATION = 20

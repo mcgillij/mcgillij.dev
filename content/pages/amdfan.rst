@@ -1,5 +1,5 @@
-AmdFan
-######
+🍃 AmdFan
+#########
 :author: mcgillij
 :cover_image: amdfan.png
 
@@ -11,7 +11,7 @@ AMDFan is a fork of `amdgpu_fan <https://github.com/chestm007/amdgpu-fan>`_, wit
 
 It's available as a PyPI package and Arch User Package.
 
-It supports active monitoring of multiple AMD gpus, as well as applying a fan curve running as a systemd service.
+It supports active monitoring of multiple AMD GPUs, as well as applying a fan curve running as a **Systemd** service.
 
 Or you can use it to manually toggle fan speeds or revert to system controlled fan speeds.
 

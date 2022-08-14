@@ -1,5 +1,5 @@
-Projects
-########
+🖳 Projects
+##########
 :author: mcgillij
 :cover_image: cpu_cover.png
 

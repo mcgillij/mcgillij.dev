@@ -46,9 +46,11 @@ a:hover {
     display: inline;
     margin:0 auto;
     float: left;
+    padding: 3px;
 }
 
 #navigation li a {
+    background-color: #44475a;
     text-decoration: none;
     color: #eceff4;
     padding: 15px;
@@ -187,6 +189,31 @@ a:hover {
 
 table { margin-bottom: 25px; width: 100; text-align: left; color: #3b4252; border-collapse: collapse; border: 1px solid #4c566a; }
 table tr:nth-child(even) { background-color: #eceff4; }
+table tr:nth-child(odd) { background-color: #8be9fd; }
 table th, table td { padding: 9px 12.5px; }
 table th { background-color: #e5e9f0; border: 1px solid #4c566a; }
 table td { border: 1px solid #4c566a; }
+
+ul.tagcloud {
+    list-style: none;
+    padding: 5px;
+}
+
+ul.tagcloud li {
+    display: inline-block;
+}
+
+li.tag-1 {
+    font-size: 200%;
+    padding: 5px;
+}
+
+li.tag-2 {
+    font-size: 150%;
+    padding: 5px;
+}
+
+ul.tagcloud .list-group-item span.badge {
+    background-color: grey;
+    color: white;
+}

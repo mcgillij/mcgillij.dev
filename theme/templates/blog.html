@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block metadata %}
+<meta name="description" content="Random things open source, Linux and gaming. Tutorials, advice, work-arounds and projects updates that I'm working on with a focus on Debian and Arch Linux.">
+<meta property="og:title" content="{{ SITENAME }}" />
+<meta property="og:description" content='Get OFF MY LAWN! All things open source, linux and gaming' />
+<meta property="og:image" content="{{ SITEURL }}/images/devoops_og.png" />
+<meta property="og:image:url" content="{{ SITEURL }}/images/devoops_og.png" />
+<meta property="og:image:alt" content="Sweet DevOops Logo" />
+<meta property="og:image:secure_url" content="{{ SITEURL }}/images/devoops_og.png" />
+<meta property="og:url" content="{{ SITEURL }}" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="{{ SITENAME }}" />
+<meta property="article:publisher" content="{{ SITEURL }}" />
+<meta property="article:section" content="Main" />
+<meta property="article:tag" content="Main" />
+<link rel="canonical" href="{{ SITEURL }}/pages/blog.html">
+<meta name="keywords" content="Linux, OpenSource, Games, Python, Arch">
+{% endblock %}
+
+{% block content %}
+    {% if articles %}
+        {% for article in articles %}
+            <div class="article-index">
+                <div class="grid grid-pad">
+                    <div class="col-8-12">
+                        <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+                        published on 📅 {{ article.date.strftime('%d/%m/%Y') }}
+                        <small>| tags : </small>{% for tag in article.tags %}
+                            {% if loop.last %}
+                                <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
+                            {% else %}
+                               <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>,</span>
+                            {% endif %}
+                        {% endfor %}
+                        {{ article.summary }}
+                    </div>
+                    <div class="col-4-12">
+                        <img src="{{ SITEURL }}/icons/{{ article.category }}.png">
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
