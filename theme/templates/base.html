@@ -11,6 +11,9 @@
         <link rel="stylesheet" href="/theme/css/main.css" />
         <link rel="stylesheet" href="/theme/css/youtube.css" />
         <link rel="stylesheet" href="/theme/css/custom.css" />
+        {% if (article and article.photo_gallery) or (articles_page and articles_page.object_list[0].photo_gallery) %}
+        <link rel="stylesheet" href="/theme/css/magnific-popup.css">
+{% endif %}
         <link rel="icon" href="/favicon.ico">
         <meta name="theme-color" content="#282a36">
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-6R4M5ZQHNJ"></script>
@@ -62,5 +65,28 @@
                 {% endblock %}
             </aside>
         </div>
+    {% if (article and article.photo_gallery) or (articles_page and articles_page.object_list[0].photo_gallery) %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/theme/js/magnific-popup.js"></script>
+<script>
+$('.gallery').magnificPopup({
+delegate: 'a',
+type: 'image',
+gallery: {
+    enabled: true,
+    navigateByImgClick: true,
+    preload: [1,2]
+},
+image: {
+    titleSrc: function(item) {
+        if (item.el.attr('caption') && item.el.attr('exif')) {
+            return (item.el.attr('caption').replace(/\\n/g, '<br />') +
+                '<small>' + item.el.attr('title') + ' - ' + item.el.attr('exif') + '</small>');
+        }
+    return item.el.attr('title') + '<small>' + item.el.attr('exif') + '</small>';
+} }
+});
+</script>
+{% endif %}
     </body>
 </html>

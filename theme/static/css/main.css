@@ -176,6 +176,7 @@ a:hover {
 
 .article-content {
     color: #f8f8f2;
+    overflow: hidden;
 }
 
 .article-content h2 {

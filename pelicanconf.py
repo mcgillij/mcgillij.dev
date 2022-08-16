@@ -19,11 +19,18 @@ PLUGINS = [
     'css-html-js-minify',
     'tag_cloud',
 #    'optimize_images',  # mega slow single threaded or something
-    'image_process'
+    'image_process',
+    'photos'
 ]
 
 # tag tag_cloud configuration
 TAG_CLOUD_MAX_ITEMS = 25
+
+# photos
+PHOTO_LIBRARY = '~/mcgillij.dev.photos'
+PHOTO_INLINE_GALLERY_ENABLED = True
+PHOTO_WATERMARK = True
+PHOTO_WATERMARK_TEXT = 'mcgillij.dev'
 
 IMAGE_PROCESS = {
     "crisp": {
