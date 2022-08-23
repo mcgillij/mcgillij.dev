@@ -1,5 +1,5 @@
-Sign your git commits with SSH instead of GPG
-#############################################
+Sign your git commits with ssh keys instead of gpg
+##################################################
 
 :author: mcgillij
 :category: Linux
@@ -13,11 +13,9 @@ Sign your git commits with SSH instead of GPG
 
 `Github announced today <https://github.blog/changelog/2022-08-23-ssh-commit-verification-now-supported/>`_ the ability to show signed commits from SSH, which is nice since it was a bit of a pain to sign with GPG (to be fair **git** has supported this for quite a while, Github just didn't show the signed commits properly).
 
-However getting this setup involved a bit of trial and error on my part.
+Getting this setup involved a bit of trial and error on my part, below are the steps I ended up taking to get it working.
 
-Here's the steps I ended up taking to get it working.
-
-Note: I'm using the **--global** flag on my git commands since I want to sign commits for all my repos, you can omit this if you want to set it on a per repo basis.
+**Note:** I'm using the **--global** flag on my git commands since I want to sign commits for all my repos, you can omit this if you want to set it on a per repo basis.
 
 Setup Git to use SSH instead of GPG
 -----------------------------------
@@ -26,11 +24,9 @@ First we need to configure git to use SSH keys instead of GPG to sign commits.
 
 .. code-block:: bash
 
-   git config --global commit.gpgsign true
-   git config --global tag.gpgsign true
    git config --global gpg.format ssh
 
-Below we indicate which public keys are allowed to sign commits.
+Below we indicate which public keys are allowed to sign commits. Replace with your public keys, unless you want me to be verified on your commits.
 
 .. code-block:: bash
  
@@ -42,14 +38,13 @@ Checking to make sure which private keys are loaded in your **ssh-agent**.
 
 .. code-block:: bash
 
-   cd ~/.ssh
    ssh-add -L
 
 This was empty for me since I had previously **killed** my ``ssh-agent``. So I needed to re-add my keys. Which can be done with the following command.
 
 .. code-block:: bash
 
-   ssh-add id_ed25519
+   ssh-add ~/.ssh/id_ed25519
    # now we can check again to make sure our key is present
    ssh-add -L
    > ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMSsJjYL0PNE8/ahTdQXbiOS4Fdg/rY8pafH2YWjmpJM mcgillivray.jason@gmail.com
@@ -119,6 +114,6 @@ When you commit your changes to a github repo, you will be able to see the verif
 Arguments for / against signing
 -------------------------------
 
-Some people believe that there's plausible deniability that goes along with not signing commits, but at the end of the day it's up-to you. I choose to sign my commits when I can.
+Some people believe that there's plausible deniability that goes along with not signing commits, but at the end of the day it's up-to you. I choose to sign my commits when I can either with GPG or SSH keys.
 
 Anyways let me know what you think, is signing good / bad, do you have an opinion on this?
