@@ -17,6 +17,8 @@ However getting this setup involved a bit of trial and error on my part.
 
 Here's the steps I ended up taking to get it working.
 
+Note: I'm using the **--global** flag on my git commands since I want to sign commits for all my repos, you can omit this if you want to set it on a per repo basis.
+
 Setup Git to use SSH instead of GPG
 -----------------------------------
 
@@ -25,6 +27,7 @@ First we need to configure git to use SSH keys instead of GPG to sign commits.
 .. code-block:: bash
 
    git config --global commit.gpgsign true
+   git config --global tag.gpgsign true
    git config --global gpg.format ssh
 
 Below we indicate which public keys are allowed to sign commits.
@@ -77,6 +80,13 @@ If you are having some troubles and you need to debug what `git` is doing behind
 .. code-block:: bash
 
    GIT_TRACE=1 git commit -S -m 'test'
+   > 20:18:49.302765 git.c:460               trace: built-in: git commit -S -m test
+   > 20:18:49.304053 run-command.c:654       trace: run_command: ssh-keygen -Y sign -n git -f /tmp/.git_signing_key_tmpHx7vuE /tmp/.git_signing_buffer_tmpEwDNMQ
+   > error: Load key "/tmp/.git_signing_key_tmpHx7vuE": invalid format?
+
+   > fatal: failed to write commit object
+
+If you get an error message like the above, you will need to add your private key to your **ssh-agent** with the **ssh-add** command as indicated in the above steps.
 
 Validating signatures
 ---------------------
@@ -110,3 +120,5 @@ Arguments for / against signing
 -------------------------------
 
 Some people believe that there's plausible deniability that goes along with not signing commits, but at the end of the day it's up-to you. I choose to sign my commits when I can.
+
+Anyways let me know what you think, is signing good / bad, do you have an opinion on this?
