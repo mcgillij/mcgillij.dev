@@ -6,6 +6,8 @@ SITENAME = "Dev Oops - All things Arch, Debian and Python"
 SITEURL = 'https://mcgillij.dev'
 SITETITLE = "Dev Oops - All things Arch, Debian and Python"
 
+READERS = {'js': None}
+
 PLUGIN_PATHS = ['pelican-plugins']
 
 PLUGINS = [
@@ -16,7 +18,7 @@ PLUGINS = [
     'better_figures_and_images',
     'sitemap',
     'better_tables',
-    'css-html-js-minify',
+   # 'css-html-js-minify',
     'tag_cloud',
 #    'optimize_images',  # mega slow single threaded or something
     'image_process',

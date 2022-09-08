@@ -20,9 +20,9 @@ This was my third outing with the drone, and so far I really like it. I'm gettin
 
 Here's a nice panorama of the river:
 
-.. image:: {static}/images/terrence_bay_pano.png
-   :alt: Terrence Bay River
-   :class: image-process-large-photo
+.. raw:: html
+
+   <iframe width="800" height="600" allowfullscreen style="border-style:none;" src="theme/html/pannellum.htm#panorama=/images/terrencebay_pano.jpg&amp;autoLoad=true"></iframe>
 
 Here's a short video of the drone flying around a bit over the river.
 
