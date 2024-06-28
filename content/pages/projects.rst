@@ -5,6 +5,13 @@
 
 An unsorted list of past and present projects I've worked on.
 
+- `Atiya's Quest <https://github.com/mcgillij/AQ/releases/tag/0.0.1>`_
+
+    A match-3 game written with Godot 
+
+   .. image:: {static}/images/atiyas_quest.png
+      :alt: Image of Atiya's Quest
+
 - `AMDFan <https://github.com/mcgillij/amdfan>`_
 
    Fan controller for AMD video cards in Linux
