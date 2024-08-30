@@ -8,7 +8,6 @@ Urtuk: The Desolation
 :slug: urtuk-the-desolation
 :summary: Urtuk: The Desolation is a new roguelike, turn-based tactical combat game with a native Linux build.
 :cover_image: urtuk.png
-:gallery: urtuk
 
 .. contents::
 
