@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*- #
 THEME="theme"
 AUTHOR = 'Jason McGillivray'
-SITENAME = "Dev Oops - All things Arch, Debian and Python"
+SITENAME = "Dev Oops"
 SITEURL = 'https://mcgillij.dev'
-SITETITLE = "Dev Oops - All things Arch, Debian and Python"
+SITETITLE = "Dev Oops - All things Arch, Debian and Python. Also home to Atiya's Quest"
 
 READERS = {'js': None}
 
@@ -132,6 +132,7 @@ SOCIAL = (
         ('🔐 keyoxide', 'https://keyoxide.org/hkp/mcgillivray.jason@gmail.com'),
         ('🌎 owncast', 'https://live.mcgillij.dev'),
         ('📄 CV/Resume', 'https://github.com/mcgillij/resume/blob/master/j_resume.pdf'),
+        ('🐶 Atiyas Quest', 'https://atiyasquest.mcgillij.dev'),
         ('📫 Atom/RSS', '/feeds/all.atom.xml'),
           )
 
