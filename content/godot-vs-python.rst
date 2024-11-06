@@ -14,7 +14,7 @@ GDScript vs Python (from a Python Dev's perspective)
 GDScript from a Python Dev's point of view
 ==========================================
 
-Learning curve coming in from having done many years of Python Dev, syntactically the language "looks" very similar, there's very little visual differences when looking at the code.
+Learning curve coming in from having done many years of Python Dev, syntactically the language "looks" quite similar, there's little visual differences when looking at the code. I find myself not really having to context switch much when reading Python or GDScript code which is nice.
 
 Whitespace:
 ***********
@@ -24,7 +24,7 @@ Python uses 4 spaces instead of Tabs in GDScript, this is something that's kind 
 
 GDScript can be written in a way that's almost visually indistinguishable from Python, with the types being optional in both Python and GDScript, more on types later.
 
-Here's some key differences that I've had to adapt, they are all very minor.
+Here's some key differences that I've had to adapt, they are all minor.
 
 Variable declaration:
 *********************
@@ -137,7 +137,7 @@ You can type Array values (but not Dictionary):
 
     var ability_list: Array[Ability]
 
-Anyways the type system in GDScript is nice to work with, especially when using the build in editor. I do not find it too overwhelming to use, and it hasn't gotten in the way of development.
+Anyways the type system in GDScript is nice to work with, especially when using the built-in editor. I do not find it too overwhelming to use, and it hasn't gotten in the way of development.
 
 Some things missing from GDScript that I've noticed that I always reach for in Python.
 
@@ -271,6 +271,7 @@ Running some unit tests:
 ************************
 
 The godot command line can be a bit clunky, and doesn't really seem to take well to having some globals declared while running unit tests, but for the most part you can run headless testing with something like the below tidbit.
+
 .. code-block:: bash
 
     godot project.godot --headless -s Equipment/Generator_test.gd
@@ -297,7 +298,7 @@ GDScript has **@export** **@onready** and **signals**, visually to me when I fir
 
     @onready var cooldown_value: Label = %cooldown_value
 
-**signals** are used to pass well signals between scenes / nodes, generally these will be associated with "callables" aka passing functions around in python, or callbacks.
+**signals** are used to pass well signals between scenes / nodes, generally these will be associated with "call-ables" aka passing functions around in python, or callbacks.
 
 .. code-block:: GDScript
 
@@ -310,6 +311,17 @@ GDScript has **@export** **@onready** and **signals**, visually to me when I fir
 The simplicity of using signals in the editors interface is nice when you are working with only a handful of scenes, but quickly, it escalates to having to create / manage a global EventBus (I'll cover this at a later date).
 
 Using the **signals** you will be able to trigger other functions with parameters passed around through the callbacks. This will allow you to build up between multiple scene objects or UI buttons etc.
+
+Missing pieces:
+***************
+
+List / Dict / Set comprehension's aren't available. Lambda's are mostly only usable to make list filters.
+
+Conclusion:
+***********
+
+I've been enjoying learning GDScript, it's been a nice change of pace from Python, and I've been able to pick it up quite quickly. At it's core it's not trying to be Python, but only Python-like, and that's enough, as the readability and the syntax is very similar. The editor itself is a joy to work with, and the documentation is quite comprehensive.
+
 
 Some of you may find this interesting if you are also trying to dig deeper into GDScript, and have a familiar background in Python development.
 
