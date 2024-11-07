@@ -39,12 +39,14 @@ Then we can select our button (in this case the "back" button).
 
 .. image:: {static}/images/godot/Pasted\ image\ 20241106131214.png
    :width: 100%
+   :alt: setting back_button signal in editor
 
 
 Double clicking the signal you want to hook into from your Button or UI object, will allow you to specify the function to call when a particular event is triggered.
 
 .. image:: {static}/images/godot/Pasted\ image\ 20241106131348.png
    :width: 100%
+   :alt: source code view of a signal
 
 The green arrow indicates that it's hooked up via the editors "Node" menu. We fill out the rest of the function with the added functionality we need, and finally **emit** the signal that we created, which will be used by another scene entirely.
 
@@ -54,6 +56,7 @@ This allows us to create a Main scene with many instantiated sub-scenes and allo
 
 .. image:: {static}/images/godot/Pasted\ image\ 20241106132706.png
    :width: 100%
+   :alt: CharacterView scene tree
 
 This allows managing all the signals from multiple sub-scenes from one script:
 
@@ -96,6 +99,7 @@ This will touch a bit on the Prefab/Resource pattern that I'll cover later. But 
 
 .. image:: {static}/images/godot/Pasted\ image\ 20241106165946.png
    :width: 100%
+   :alt: EnvironmentPrefab view in the editor
 
 In this case the goal is to create many click-able environmental effects, since we **can't pre-define** all the `_on_pressed()` for the button, this does not scale, having to wire all of these up through the editor is generally not possible since they would all need to be predefined and exist in a scene.  If we want to add more environmental effects we'd have to alter the scenes and the scripts, making this a huge pain of toggling visibility etc.
 
@@ -122,6 +126,7 @@ You can do this from the **Project/Project Settings** / Globals:
 
 .. image:: {static}/images/godot/Pasted\ image\ 20241106174502.png
    :width: 100%
+   :alt: Globals in the Project Settings
 
 So we have 2 pieces of the puzzle done now we have the **signal** defined, and we are emitting it from our Prefab. Now we just need to **connect** it to our *callable* from our Scene that will use the prefabs.
 
@@ -165,11 +170,13 @@ The important portions here are the `@export var prefab:PackedScene` which will 
 
 .. image:: {static}/images/godot/Pasted\ image\ 20241106165946.png
    :width: 100%
+   :alt: EnvironmentPrefab view in the editor
 
 With the prefab variable loaded, we can then **instantiate()** it call it's `setup()` method passing in our `Resource` and then the button / signals will be automatically wired up due to what happens in our `_ready()` function.
 
 .. image:: {static}/images/godot/Pasted\ image\ 20241106175909.png
    :width: 100%
+   :alt: EnvironmentPrefab view in the editor
 
 ----
 
@@ -177,6 +184,7 @@ Once you **connect** the signal to a `callable` in this case:
 
 .. image:: {static}/images/godot/Pasted\ image\ 20241106175714.png
    :width: 100%
+   :alt: EnvironmentPrefab view in the editor
 
 ----
 
@@ -188,11 +196,13 @@ Some other examples that I've used the EventBus pattern, would be for creating a
 
 .. image:: {static}/images/godot/Pasted\ image\ 20241106180750.png
    :width: 100%
+   :alt: CombatLog view in the editor
 
 Buffs / Cooldowns and Status effects were also a good candidate for this.
 
 .. image:: {static}/images/godot/Pasted\ image\ 20241106181117.png
    :width: 100%
+   :alt: Buffs view in the editor
 
 I've found that a pretty good guideline for when to use the EventBus or not, is when you aren't creating a static interface you will probably have to rely on the EventBus for most of the dynamic game programming. However when creating the Scenes and UI's for your game, wiring up all the signals within the interface does provide really quick debugging.
 
