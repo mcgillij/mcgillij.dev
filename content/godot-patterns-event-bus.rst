@@ -25,7 +25,9 @@ Signals are a powerful way to trigger functions in other Scenes / Scripts, and t
 You should try to wire up the signals to always pass/bubble their signals "Up" to their parent scenes, the relation between objects emitting the signals.
 
 In general the Scenes will have a script attached to one of the top level elements, so they can refer to the child nodes.
-### Bubbling up the signals:
+
+Bubbling up the signals:
+------------------------
 
 Passing a signal up from a button to the top most parent, which then can pass it to another scene, if your using nested scenes as part of a larger scene.
 

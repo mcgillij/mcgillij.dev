@@ -189,7 +189,7 @@ a:hover {
     border-radius: 10px;
 }
 
-table { margin-bottom: 25px; width: 100; text-align: left; color: #3b4252; border-collapse: collapse; border: 1px solid #4c566a; }
+table { margin-bottom: 25px; width: 200; text-align: left; color: #3b4252; border-collapse: collapse; border: 1px solid #4c566a; }
 table tr:nth-child(even) { background-color: #eceff4; }
 table tr:nth-child(odd) { background-color: #8be9fd; }
 table th, table td { padding: 9px 12.5px; }

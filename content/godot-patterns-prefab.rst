@@ -167,7 +167,9 @@ In the above snippet, you can see how we are *instantiate* our prefab and call i
 
 That's it. The process of working with prefabs once they are created is super concise. There is however a bit of upfront configuration and resource creation. However over the long term this will allow you to dynamically add more Abilities (in my case) to your game, even without recompilation since you can manage the resources without having to recompile the game itself. Let me know if you find this helpful, or if you have any other neat patterns to work with in Godot.
 
-## Bonus views using the Ability resources with prefabs:
+Bonus uses with Ability resource and prefabs:
+-----------------------------------------------------
+
 
 .. image:: {static}/images/godot/Pasted\ image\ 20241107184247.png
    :width: 100%
@@ -182,4 +184,4 @@ That's it. The process of working with prefabs once they are created is super co
    :alt: Game screen showing ability viewer in Atiya's Quest
 
 
-Using prefabs allows quick and easy re-use of the resources that you've defined.
+Using prefabs allows easy re-use of the resources that you've defined.

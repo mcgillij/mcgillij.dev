@@ -1,7 +1,8 @@
-🔍Privacy Policy
-################
+Privacy Policy
+##############
 :author: mcgillij
 :cover_image: atiya.jpg
+:status: hidden
 
 Privacy Policy
 ==============

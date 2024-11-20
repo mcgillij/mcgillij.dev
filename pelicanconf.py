@@ -61,8 +61,8 @@ IMAGE_PROCESS = {
     },
 }
 
+#"exclude": ["tag/", "category/"],
 SITEMAP = {
-    "exclude": ["tag/", "category/"],
     "format": "xml",
     "priorities": {
         "articles": 0.5,
@@ -129,6 +129,7 @@ SOCIAL = (
         ('🐙 github', 'https://github.com/mcgillij'),
         ('♊︎ gemini capsule', 'gemini://gemini.mcgillij.dev'),
         ('🐘 @mcgillij', 'https://fosstodon.org/@mcgillij'),
+        ('🐦 @mcgillij.dev', 'https://bsky.app/profile/mcgillij.dev'),
         ('🔐 keyoxide', 'https://keyoxide.org/hkp/mcgillivray.jason@gmail.com'),
         ('🌎 owncast', 'https://live.mcgillij.dev'),
         ('📄 CV/Resume', 'https://github.com/mcgillij/resume/blob/master/j_resume.pdf'),

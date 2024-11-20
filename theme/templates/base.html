@@ -33,9 +33,9 @@
                 <a href="/"><img id='title' src="/images/devoops_title.png" alt='devoops'></img></a>
                 <ul id="navigation">
                     {% if DISPLAY_PAGES_ON_MENU %}
-                    {% for page in pages %}
-                    <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-                    {% endfor %}
+                        {% for page in pages %}
+                            <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                        {% endfor %}
                     {% endif %}
                 </ul>
                 {% endblock %}

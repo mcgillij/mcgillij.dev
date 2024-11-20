@@ -61,7 +61,7 @@ If you aren't interested in running IPython along side neovim in TMUX, you can j
 
 # Screenshot
 
-.. image:: https://github.com/mcgillij/vimde/blob/main/screenshot.png?raw=true
+.. image:: {static}/images/vimde.png
    :alt: screenshot
 
 What this setup provides
