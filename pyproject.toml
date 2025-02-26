@@ -5,23 +5,23 @@ description = ""
 authors = ["mcgillij <mcgillivray.jason@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9 || ^3.10"
-pelican = "^4.6.0"
-typogrify = "^2.0.7"
-Markdown = "^3.3.3"
-beautifulsoup4 = "^4.9.3"
-pysvg-py3 = "^0.2.2"
-Pillow = "^9.0.1"
-cssutils = "^1.0.2"
-css-html-js-minify = "^2.5.5"
-lxml = "^4.6.2"
-sphinx-gemini-builder = "^1.1.1"
-piexif = "^1.1.3"
-awscli = "^1.27.16"
+python = "^3.12"
+pelican = "4.11.0"
+typogrify = "*"
+Markdown = "*"
+beautifulsoup4 = "*"
+pysvg-py3 = "*"
+Pillow = "*"
+cssutils = "*"
+css-html-js-minify = "*"
+lxml = "*"
+sphinx-gemini-builder = "*"
+piexif = "*"
+awscliv2 = "*"
+legacy-cgi = "^2.6.2"
 
 [tool.poetry.dev-dependencies]
-neovim = "^0.3.1"
-ipython = "^7.29.0"
+neovim = "*"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
