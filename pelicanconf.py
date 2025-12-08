@@ -125,9 +125,9 @@ LINKS = (('Kernel', 'https://kernel.org'),
          )
 
 # Social widget
+        #('♊︎ gemini capsule', 'gemini://gemini.mcgillij.dev'),
 SOCIAL = (
         ('🐙 github', 'https://github.com/mcgillij'),
-        ('♊︎ gemini capsule', 'gemini://gemini.mcgillij.dev'),
         ('🐘 @mcgillij', 'https://fosstodon.org/@mcgillij'),
         ('🐦 @mcgillij.dev', 'https://bsky.app/profile/mcgillij.dev'),
         ('🔐 keyoxide', 'https://keyoxide.org/hkp/mcgillivray.jason@gmail.com'),
