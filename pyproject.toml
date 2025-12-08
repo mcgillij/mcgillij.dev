@@ -19,6 +19,7 @@ sphinx-gemini-builder = "*"
 piexif = "*"
 awscliv2 = "*"
 legacy-cgi = "^2.6.2"
+pytz = "^2025.2"
 
 [tool.poetry.dev-dependencies]
 neovim = "*"
