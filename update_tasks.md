@@ -67,8 +67,8 @@ Layout breaks on mobile/tablet with no media queries or fluid layout handling.
 
 **Goal:** Migrate from archived Utterances to an active alternative.
 
-- [ ] Replace Utterances with giscus (GitHub Discussions-based, actively maintained, drop-in replacement)
-- [ ] Update `article.html` comments block with giscus config
+- [x] Replace Utterances with giscus (GitHub Discussions-based, actively maintained, drop-in replacement)
+- [x] Update `article.html` comments block with giscus config
 - [ ] Test comment rendering on article pages
 
 ### Phase 6: Performance & Polish
