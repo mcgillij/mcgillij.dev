@@ -47,12 +47,12 @@ Layout breaks on mobile/tablet with no media queries or fluid layout handling.
 
 **Goal:** Cleaner, maintainable styles with modern CSS features.
 
-- [ ] Convert all hardcoded colors to CSS custom properties (variables) for easy theming
-- [ ] Add light mode support via `prefers-color-scheme` and/or toggle button
-- [ ] Improve typography — web fonts (Inter + JetBrains Mono or similar), fluid type scaling, better line-heights
-- [ ] Modernize code block styling (pygment.css is already in place, just needs refinement)
-- [ ] Add smooth transitions for hover states, theme switching
-- [ ] Remove `simplegrid.css` entirely
+- [x] Convert all hardcoded colors to CSS custom properties (variables) for easy theming
+- [x] Add light mode support via `prefers-color-scheme` and/or toggle button
+- [x] Improve typography — web fonts (Inter + JetBrains Mono or similar), fluid type scaling, better line-heights
+- [x] Modernize code block styling (pygment.css is already in place, just needs refinement)
+- [x] Add smooth transitions for hover states, theme switching
+- [x] Remove `simplegrid.css` entirely
 
 ### Phase 4: JavaScript Cleanup
 

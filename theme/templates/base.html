@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
         {% block metadata %}{% endblock %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/theme/css/normalize.css" />
         <link rel="stylesheet" href="/theme/css/pygment.css" />
         <link rel="stylesheet" href="/theme/css/main.css" />
@@ -39,6 +42,7 @@
                             {% endfor %}
                         {% endif %}
                     </ul>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">☀</button>
                 </div>
                 {% endblock %}
             </header>
@@ -99,5 +103,39 @@
     });
     </script>
     {% endif %}
+
+    <script>
+    (function() {
+        var toggle = document.getElementById('theme-toggle');
+        if (!toggle) return;
+
+        function setTheme(mode) {
+            document.documentElement.classList.remove('light-mode', 'dark-mode');
+            if (mode === 'light') {
+                document.documentElement.classList.add('light-mode');
+                toggle.textContent = '☾';
+            } else {
+                toggle.textContent = '☀';
+            }
+            try { localStorage.setItem('theme', mode); } catch(e) {}
+        }
+
+        var saved;
+        try { saved = localStorage.getItem('theme'); } catch(e) {}
+
+        if (saved === 'light') {
+            setTheme('light');
+        } else if (saved === 'dark') {
+            setTheme('dark');
+        } else {
+            toggle.textContent = window.matchMedia('(prefers-color-scheme: light)').matches ? '☾' : '☀';
+        }
+
+        toggle.addEventListener('click', function() {
+            var isLight = document.documentElement.classList.contains('light-mode');
+            setTheme(isLight ? 'dark' : 'light');
+        });
+    })();
+    </script>
     </body>
 </html>
