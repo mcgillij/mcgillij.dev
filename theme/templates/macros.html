@@ -1,0 +1,13 @@
+{% macro og_article(title, description, url) %}
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content='{{ description }}' />
+<meta property="og:image" content="{{ SITEURL }}/images/devoops_og.png" />
+<meta property="og:image:url" content="{{ SITEURL }}/images/devoops_og.png" />
+<meta property="og:image:alt" content="Sweet DevOops Logo" />
+<meta property="og:image:secure_url" content="{{ SITEURL }}/images/devoops_og.png" />
+<meta property="og:url" content="{{ url }}" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="{{ SITENAME }}" />
+<meta property="article:publisher" content="{{ SITEURL }}" />
+{% endmacro %}

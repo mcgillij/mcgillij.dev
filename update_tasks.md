@@ -37,11 +37,11 @@ Layout breaks on mobile/tablet with no media queries or fluid layout handling.
 
 **Goal:** Clean up template inheritance and eliminate duplication.
 
-- [ ] Consolidate `base.html` and `main.html` into a single base template (they're nearly identical right now)
-- [ ] Move Google Analytics script to base, use `{% block analytics %}` for overrides
-- [ ] Extract repeated OG meta tags into reusable blocks or macros
-- [ ] Standardize article listing layout across `index.html`, `blog.html`
-- [ ] Fix `tags.html` — currently just says "tags", needs proper implementation
+- [x] Consolidate `base.html` and `main.html` into a single base template (they're nearly identical right now)
+- [x] Move Google Analytics script to base, use `{% block analytics %}` for overrides
+- [x] Extract repeated OG meta tags into reusable blocks or macros
+- [x] Standardize article listing layout across `index.html`, `blog.html`
+- [x] Fix `tags.html` — currently just says "tags", needs proper implementation
 
 ### Phase 3: CSS Modernization
 

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from 'macros.html' import og_article %}
 
 {% block title %}
 {{ article.title }} - {{ SITENAME }}
@@ -14,15 +15,7 @@
   {% endif %}
   {% endfor %}">
 <link rel='canonical' href='{{ SITEURL }}/{{ article.url }}'>
-<meta property="og:type" content="article" />
-<meta property="og:title" content="{{ article.title }} - {{ SITENAME }}" />
-<meta property="og:description" content='{{ article.summary|striptags }}' />
-<meta property="og:image" content="{{ SITEURL }}/images/devoops_og.png" />
-<meta property="og:image:url" content="{{ SITEURL }}/images/devoops_og.png" />
-<meta property="og:image:secure_url" content="{{ SITEURL }}/images/devoops_og.png" />
-<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
-<meta property="og:site_name" content="{{ SITENAME }}" />
-<meta property="article:publisher" content="{{ SITEURL }}" />
+{{ og_article(article.title ~ ' - ' ~ SITENAME, article.summary|striptags, SITEURL ~ '/' ~ article.url) }}
 <meta property="article:section" content="{{ category }}" />
 <meta property="article:tag" content="{{ category }}" />
 {% endblock %}

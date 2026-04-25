@@ -1,18 +1,9 @@
 {% extends "main.html" %}
+{% from 'macros.html' import og_article %}
 
 {% block metadata %}
 <meta name="description" content="Random things open source, Linux and gaming. Tutorials, advice, work-arounds and projects updates that I'm working on with a focus on Debian and Arch Linux.">
-<meta property="og:title" content="{{ SITENAME }}" />
-<meta property="og:description" content='Get OFF MY LAWN! All things open source, linux and gaming' />
-<meta property="og:image" content="{{ SITEURL }}/images/devoops_og.png" />
-<meta property="og:image:url" content="{{ SITEURL }}/images/devoops_og.png" />
-<meta property="og:image:alt" content="Sweet DevOops Logo" />
-<meta property="og:image:secure_url" content="{{ SITEURL }}/images/devoops_og.png" />
-<meta property="og:url" content="{{ SITEURL }}" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:type" content="article" />
-<meta property="og:site_name" content="{{ SITENAME }}" />
-<meta property="article:publisher" content="{{ SITEURL }}" />
+{{ og_article(SITENAME, 'Get OFF MY LAWN! All things open source, linux and gaming', SITEURL) }}
 <meta property="article:section" content="Main" />
 <meta property="article:tag" content="Main" />
 <link rel="canonical" href="{{ SITEURL }}">

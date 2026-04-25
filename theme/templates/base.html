@@ -14,6 +14,7 @@
 {% endif %}
         <link rel="icon" href="/favicon.ico">
         <meta name="theme-color" content="#282a36">
+        {% block analytics %}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-6R4M5ZQHNJ"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -22,6 +23,7 @@
 
             gtag('config', 'G-6R4M5ZQHNJ');
         </script>
+        {% endblock %}
     </head>
 
     <body>
