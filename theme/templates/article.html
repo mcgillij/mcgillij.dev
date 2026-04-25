@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 
 {% block title %}
-{{ article.title }} - {{ SITENAME }}
+{{ article.title }} - {{ SITENAME }}
 {% endblock %}
 
 {% block metadata %}
 <meta name='description' content='{{ article.summary|striptags }}'>
 <meta name="keywords" content="{% for tag in article.tags %}
  {% if loop.last %}
- {{ tag }}
- {% else %}
- {{ tag }},
- {% endif %}
- {% endfor %}">
+  {{ tag }}
+  {% else %}
+  {{ tag }},
+  {% endif %}
+  {% endfor %}">
 <link rel='canonical' href='{{ SITEURL }}/{{ article.url }}'>
 <meta property="og:type" content="article" />
 <meta property="og:title" content="{{ article.title }} - {{ SITENAME }}" />
@@ -29,21 +29,23 @@
 
 {% block content %}
 <div class="article">
+    {% if article.cover_image_url %}
     <div class="cover">
         <img src="{{ article.cover_image_url }}" alt="Cover image">
     </div>
+    {% endif %}
     <h1>{{ article.title }}</h1>
     <small>published {{ article.date.strftime('%d/%m/%Y') }} in <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></small>
-    <small>| tags : </small>
+    <small>| tags: </small>
     {% for tag in article.tags %}
     {% if loop.last %}
-    <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
+    <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
     {% else %}
-    <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>,</span>
+    <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>,</span>
     {% endif %}
     {% endfor %}
     {% if article.readtime %}
-    <span><p style="text-align:right; color:#aaaaaa; ">&nbsp Estimated read time: {{ article.readtime.minutes }} min.</p></span>
+    <span><p>Estimated read time: {{ article.readtime.minutes }} min.</p></span>
     {% endif %}
     <div class="article-content">
         {{ article.content }}

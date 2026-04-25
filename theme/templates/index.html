@@ -36,24 +36,20 @@ Enjoy your stay! You can find all the things I'm working on with regards to:
 
 <hr>
 
-<H1>Latest Blog Posts</H1>
+<h1>Latest Blog Posts</h1>
 {% if articles %}
 {% for article in articles[:7] %}
 <div class="article-index">
-    <div class="grid grid-pad">
-        <div class="col-8-12">
-            <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
-            published on 📅 {{ article.date.strftime('%d/%m/%Y') }}
-            {{ article.summary }}
-            <small>| tags : </small>{% for tag in article.tags %}
-            {% if loop.last %}
-            <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
-            {% else %}
-            <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>,</span>
-            {% endif %}
-            {% endfor %}
-        </div>
-    </div>
+    <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+    published on {{ article.date.strftime('%d/%m/%Y') }}
+    {{ article.summary }}
+    <small>| tags: </small>{% for tag in article.tags %}
+    {% if loop.last %}
+    <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
+    {% else %}
+    <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>,</span>
+    {% endif %}
+    {% endfor %}
 </div>
 {% endfor %}
 {% endif %}

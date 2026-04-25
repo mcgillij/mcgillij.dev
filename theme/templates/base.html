@@ -6,11 +6,9 @@
         <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
         {% block metadata %}{% endblock %}
         <link rel="stylesheet" href="/theme/css/normalize.css" />
-        <link rel="stylesheet" href="/theme/css/simplegrid.css" />
         <link rel="stylesheet" href="/theme/css/pygment.css" />
         <link rel="stylesheet" href="/theme/css/main.css" />
         <link rel="stylesheet" href="/theme/css/youtube.css" />
-        <link rel="stylesheet" href="/theme/css/custom.css" />
         {% if (article and article.photo_gallery) or (articles_page and articles_page.object_list[0].photo_gallery) %}
         <link rel="stylesheet" href="/theme/css/magnific-popup.css">
 {% endif %}
@@ -27,66 +25,77 @@
     </head>
 
     <body>
-        <header class="grid grid-pad">
-            <div class="col-1-1 header">
+        <div class="site-wrapper">
+            <header class="site-header">
                 {% block header %}
-                <a href="/"><img id='title' src="/images/devoops_title.png" alt='devoops'></img></a>
-                <ul id="navigation">
-                    {% if DISPLAY_PAGES_ON_MENU %}
-                        {% for page in pages %}
-                            <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-                        {% endfor %}
-                    {% endif %}
-                </ul>
-                {% endblock %}
-            </div>
-        </header>
-
-        <div class="grid grid-pad">
-            <section class="col-10-12" id="content">
-                {% block content %}{% endblock %}
-                {% block comments %}{% endblock %}
-            </section>
-
-            <aside class="col-2-12" id="side">
-                {% block side %}
-
-                {% if SOCIAL %}
-                <div class="widget">
-                    {% for name, url in SOCIAL %}
-                    <div class="cat-link">
-                        <a rel="me" href="{{ url }}">{{ name }}</a>
-                    </div>
-                    {% endfor %}
+                <div class="header-inner">
+                    <a href="/"><img id='title' src="/images/devoops_title.png" alt='devoops'></a>
+                    <ul id="navigation">
+                        {% if DISPLAY_PAGES_ON_MENU %}
+                            {% for page in pages %}
+                                <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
                 </div>
-                {% endif %}
-
-
                 {% endblock %}
-            </aside>
+            </header>
+
+            <div class="main-layout">
+                <section id="content">
+                    {% block content %}{% endblock %}
+                    {% block comments %}{% endblock %}
+                </section>
+
+                <aside id="side">
+                    {% block side %}
+                    {% if SOCIAL %}
+                    <div class="widget">
+                        {% for name, url in SOCIAL %}
+                        <div class="cat-link">
+                            <a rel="me" href="{{ url }}">{{ name }}</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    {% endblock %}
+                </aside>
+            </div>
+
+            <footer>
+                <center>
+                    <p>
+                    <a href="https://fediring.net/previous?host=mcgillij.dev">←</a>
+                    <a href="https://fediring.net/">Fediring</a>
+                    <a href="https://fediring.net/next?host=mcgillij.dev">→</a>
+                    </p>
+                    <a href="https://512kb.club"><img src="https://512kb.club/images/blue-team.svg" /></a>
+                </center>
+            </footer>
         </div>
+
     {% if (article and article.photo_gallery) or (articles_page and articles_page.object_list[0].photo_gallery) %}
-<script src="/theme/js/jquery.min.js"></script>
-<script src="/theme/js/magnific-popup.js"></script>
-<script>
-$('.gallery').magnificPopup({
-delegate: 'a',
-type: 'image',
-gallery: {
-    enabled: true,
-    navigateByImgClick: true,
-    preload: [1,2]
-},
-image: {
-    titleSrc: function(item) {
-        if (item.el.attr('caption') && item.el.attr('exif')) {
-            return (item.el.attr('caption').replace(/\\n/g, '<br />') +
-                '<small>' + item.el.attr('title') + ' - ' + item.el.attr('exif') + '</small>');
-        }
-    return item.el.attr('title') + '<small>' + item.el.attr('exif') + '</small>';
-} }
-});
-</script>
-{% endif %}
+    <script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/magnific-popup.js"></script>
+    <script>
+    $('.gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [1,2]
+    },
+    image: {
+        titleSrc: function(item) {
+            if (item.el.attr('caption') && item.el.attr('exif')) {
+                return (item.el.attr('caption').replace(/\\n/g, '<br />') +
+                    '<small>' + item.el.attr('title') + ' - ' + item.el.attr('exif') + '</small>');
+            }
+        return item.el.attr('title') + '<small>' + item.el.attr('exif') + '</small>';
+    } }
+    });
+    </script>
+    {% endif %}
     </body>
 </html>
