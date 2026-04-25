@@ -30,6 +30,9 @@
     </head>
 
     <body>
+        {% if article %}
+        <div class="reading-progress" id="reading-progress"></div>
+        {% endif %}
         <div class="site-wrapper">
             <header class="site-header">
                 {% block header %}
@@ -115,6 +118,30 @@
             var isLight = document.documentElement.classList.contains('light-mode');
             setTheme(isLight ? 'dark' : 'light');
         });
+    })();
+
+    (function() {
+        var bar = document.getElementById('reading-progress');
+        if (!bar) return;
+
+        function updateProgress() {
+            var scrollTop = window.scrollY || document.documentElement.scrollTop;
+            var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            bar.style.width = Math.min(progress, 100) + '%';
+        }
+
+        window.addEventListener('scroll', updateProgress, { passive: true });
+        updateProgress();
+    })();
+
+    (function() {
+        var articles = document.querySelectorAll('.article-content img');
+        for (var i = 0; i < articles.length; i++) {
+            if (!articles[i].hasAttribute('loading')) {
+                articles[i].setAttribute('loading', 'lazy');
+            }
+        }
     })();
     </script>
     </body>

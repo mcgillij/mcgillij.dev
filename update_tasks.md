@@ -75,13 +75,13 @@ Layout breaks on mobile/tablet with no media queries or fluid layout handling.
 
 **Goal:** Optimize loading and add finishing touches.
 
-- [ ] Add `font-display: swap` for web fonts
-- [ ] Preconnect to font CDN URLs
-- [ ] Add reading progress bar at top of articles
-- [ ] Improve cover image handling with lazy loading
-- [ ] Add smooth scroll behavior
-- [ ] Optimize footer layout
-- [ ] Ensure all Pelican plugins still work: `pelican-cover-image`, `readtime`, `pelican_youtube`, `extract_toc`, `better_figures_and_images`, `sitemap`, `better_tables`, `tag_cloud`, `image_process`, `photos`
+- [x] Add `font-display: swap` for web fonts
+- [x] Preconnect to font CDN URLs
+- [x] Add reading progress bar at top of articles
+- [x] Improve cover image handling with lazy loading
+- [x] Add smooth scroll behavior
+- [x] Optimize footer layout
+- [x] Ensure all Pelican plugins still work: `pelican-cover-image`, `readtime`, `pelican_youtube`, `extract_toc`, `better_figures_and_images`, `sitemap`, `better_tables`, `tag_cloud`, `image_process`, `photos`
 
 ---
 

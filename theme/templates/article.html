@@ -24,7 +24,7 @@
 <div class="article">
     {% if article.cover_image_url %}
     <div class="cover">
-        <img src="{{ article.cover_image_url }}" alt="Cover image">
+        <img src="{{ article.cover_image_url }}" alt="Cover image" loading="eager">
     </div>
     {% endif %}
     <h1>{{ article.title }}</h1>

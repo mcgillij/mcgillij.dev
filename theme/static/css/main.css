@@ -601,7 +601,32 @@ footer {
 }
 
 footer p {
-    margin: 0 0 10px 0;
+    margin: 0 0 12px 0;
+}
+
+footer a {
+    color: var(--text-secondary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--link-color);
+    background-color: rgba(68, 71, 90, 0.3);
+    text-decoration: none;
+}
+
+footer img {
+    margin-top: 8px;
+    border: none;
+    box-shadow: none;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+footer img:hover {
+    opacity: 1;
 }
 
 /* === Page Content === */
@@ -722,6 +747,18 @@ hr {
     border: none;
     border-top: 1px solid var(--border-color);
     margin: 25px 0;
+}
+
+/* === Reading Progress Bar === */
+.reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--bold-color), var(--heading-color));
+    z-index: 1001;
+    transition: width 0.1s ease-out;
 }
 
 /* === Theme Toggle === */
