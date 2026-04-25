@@ -19,7 +19,7 @@
         <meta name="theme-color" content="#282a36">
         {% block analytics %}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-6R4M5ZQHNJ"></script>
-        <script>
+        <script defer>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -81,30 +81,10 @@
         </div>
 
     {% if (article and article.photo_gallery) or (articles_page and articles_page.object_list[0].photo_gallery) %}
-    <script src="/theme/js/jquery.min.js"></script>
-    <script src="/theme/js/magnific-popup.js"></script>
-    <script>
-    $('.gallery').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    gallery: {
-        enabled: true,
-        navigateByImgClick: true,
-        preload: [1,2]
-    },
-    image: {
-        titleSrc: function(item) {
-            if (item.el.attr('caption') && item.el.attr('exif')) {
-                return (item.el.attr('caption').replace(/\\n/g, '<br />') +
-                    '<small>' + item.el.attr('title') + ' - ' + item.el.attr('exif') + '</small>');
-            }
-        return item.el.attr('title') + '<small>' + item.el.attr('exif') + '</small>';
-    } }
-    });
-    </script>
+    <script src="/theme/js/lightbox.js"></script>
     {% endif %}
 
-    <script>
+    <script defer>
     (function() {
         var toggle = document.getElementById('theme-toggle');
         if (!toggle) return;

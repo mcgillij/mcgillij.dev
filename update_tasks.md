@@ -58,10 +58,10 @@ Layout breaks on mobile/tablet with no media queries or fluid layout handling.
 
 **Goal:** Remove unnecessary dependencies.
 
-- [ ] Remove jQuery dependency (`jquery.min.js`)
-- [ ] Replace magnific-popup with a lighter vanilla JS lightbox or use native `<dialog>` element
-- [ ] Defer non-critical JS loading
-- [ ] Add theme toggle functionality (if Phase 3 light mode is implemented)
+- [x] Remove jQuery dependency (`jquery.min.js`)
+- [x] Replace magnific-popup with a lighter vanilla JS lightbox or use native `<dialog>` element
+- [x] Defer non-critical JS loading
+- [x] Add theme toggle functionality (if Phase 3 light mode is implemented)
 
 ### Phase 5: Comments Migration
 
