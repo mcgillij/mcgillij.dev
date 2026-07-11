@@ -1,16 +1,15 @@
 {% extends "base.html" %}
 
+{% block title %}Tags - {{ SITENAME }}{% endblock %}
+
 {% block content %}
-<h1>All Tags</h1>
-<hr>
-<ul class="tagcloud">
+<header class="listing-header">
+    <p class="eyebrow">Browse</p>
+    <h1>All tags</h1>
+</header>
+<ul class="taxonomy-list">
     {% for tag, articles in tags %}
-    <li class="tag-2">
-        <a href="{{ SITEURL }}/{{ tag.url }}">
-            {{ tag }}
-            <span class="badge">{{ articles|count }}</span>
-        </a>
-    </li>
+    <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a><span>{{ articles|count }} posts</span></li>
     {% endfor %}
 </ul>
 {% endblock %}

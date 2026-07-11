@@ -1,5 +1,16 @@
-{% extends "index.html" %}
+{% extends "base.html" %}
+{% from 'macros.html' import post_listing with context %}
 
-{% block title %}
-    {{ SITENAME }} - {{ category.name }}
+{% block title %}{{ SITENAME }} - {{ category.name }}{% endblock %}
+
+{% block content %}
+<header class="listing-header">
+    <p class="eyebrow">Category</p>
+    <h1>{{ category.name }}</h1>
+</header>
+<div class="post-list">
+    {% for article in articles_page.object_list %}
+    {{ post_listing(article, false) }}
+    {% endfor %}
+</div>
 {% endblock %}

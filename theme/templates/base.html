@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js dark-mode">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
         {% block metadata %}{% endblock %}
+        <script>
+            (function () {
+                try {
+                    if (localStorage.getItem('theme') === 'light') {
+                        document.documentElement.classList.remove('dark-mode');
+                        document.documentElement.classList.add('light-mode');
+                    }
+                } catch (error) {}
+            }());
+        </script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/theme/css/normalize.css" />
-        <link rel="stylesheet" href="/theme/css/pygment.css" />
-        <link rel="stylesheet" href="/theme/css/main.css" />
-        <link rel="stylesheet" href="/theme/css/youtube.css" />
-        {% if (article and article.photo_gallery) or (articles_page and articles_page.object_list[0].photo_gallery) %}
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/theme/css/normalize.css">
+        <link rel="stylesheet" href="/theme/css/pygment.css">
+        <link rel="stylesheet" href="/theme/css/main.css">
+        <link rel="stylesheet" href="/theme/css/youtube.css">
+        {% if (article and article.photo_gallery) or (articles_page and articles_page.object_list and articles_page.object_list[0].photo_gallery) %}
         <link rel="stylesheet" href="/theme/css/magnific-popup.css">
-{% endif %}
+        {% endif %}
         <link rel="icon" href="/favicon.ico">
         <meta name="theme-color" content="#282a36">
         {% block analytics %}
@@ -23,7 +33,6 @@
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-6R4M5ZQHNJ');
         </script>
         {% endblock %}
@@ -31,117 +40,110 @@
 
     <body>
         {% if article %}
-        <div class="reading-progress" id="reading-progress"></div>
+        <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
         {% endif %}
         <div class="site-wrapper">
             <header class="site-header">
                 {% block header %}
                 <div class="header-inner">
-                    <a href="/"><img id='title' src="/images/devoops_title.png" alt='devoops'></a>
-                    <ul id="navigation">
-                        {% if DISPLAY_PAGES_ON_MENU %}
-                            {% for page in pages %}
+                    <a class="site-logo" href="/" aria-label="{{ SITENAME }} home">
+                        <img id="title" src="/images/devoops_title.png" alt="Dev Oops">
+                    </a>
+                    <nav class="site-nav" aria-label="Primary navigation">
+                        <ul id="navigation">
+                            <li><a href="/">Home</a></li>
+                            {% if DISPLAY_PAGES_ON_MENU %}
+                                {% for page in pages %}
                                 <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-                            {% endfor %}
-                        {% endif %}
-                    </ul>
-                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">☀</button>
+                                {% endfor %}
+                            {% endif %}
+                            <li><a href="/tags.html">Tags</a></li>
+                            <li><a href="/feeds/all.atom.xml">RSS</a></li>
+                        </ul>
+                    </nav>
+                    <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light theme">
+                        <span aria-hidden="true">◐</span><span class="theme-toggle-label">Theme</span>
+                    </button>
                 </div>
                 {% endblock %}
             </header>
 
             <div class="main-layout">
-                <section id="content">
+                <main id="content">
                     {% block content %}{% endblock %}
                     {% block comments %}{% endblock %}
-                </section>
+                </main>
 
-                <aside id="side">
+                <aside id="side" aria-label="Site information">
                     {% block side %}
                     {% if SOCIAL %}
-                    <div class="widget">
-                        {% for name, url in SOCIAL %}
-                        <div class="cat-link">
-                            <a rel="me" href="{{ url }}">{{ name }}</a>
-                        </div>
-                        {% endfor %}
-                    </div>
+                    <section class="widget elsewhere" aria-labelledby="elsewhere-title">
+                        <h2 id="elsewhere-title">Elsewhere</h2>
+                        <ul>
+                            {% for name, url in SOCIAL %}
+                            <li><a rel="me" href="{{ url }}">{{ name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </section>
                     {% endif %}
                     {% endblock %}
                 </aside>
             </div>
 
             <footer>
-                <center>
-                    <p>
+                <p>
                     <a href="https://fediring.net/previous?host=mcgillij.dev">←</a>
                     <a href="https://fediring.net/">Fediring</a>
                     <a href="https://fediring.net/next?host=mcgillij.dev">→</a>
-                    </p>
-                </center>
+                </p>
             </footer>
         </div>
 
-    {% if (article and article.photo_gallery) or (articles_page and articles_page.object_list[0].photo_gallery) %}
-    <script src="/theme/js/lightbox.js"></script>
-    {% endif %}
+        {% if (article and article.photo_gallery) or (articles_page and articles_page.object_list and articles_page.object_list[0].photo_gallery) %}
+        <script src="/theme/js/lightbox.js"></script>
+        {% endif %}
+        <script defer>
+            (function () {
+                var root = document.documentElement;
+                var toggle = document.getElementById('theme-toggle');
+                root.classList.remove('no-js');
+                if (!toggle) return;
 
-    <script defer>
-    (function() {
-        var toggle = document.getElementById('theme-toggle');
-        if (!toggle) return;
+                function setTheme(mode, persist) {
+                    var isLight = mode === 'light';
+                    root.classList.toggle('light-mode', isLight);
+                    root.classList.toggle('dark-mode', !isLight);
+                    toggle.setAttribute('aria-pressed', String(isLight));
+                    toggle.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+                    if (persist) {
+                        try { localStorage.setItem('theme', mode); } catch (error) {}
+                    }
+                }
 
-        function setTheme(mode) {
-            document.documentElement.classList.remove('light-mode', 'dark-mode');
-            if (mode === 'light') {
-                document.documentElement.classList.add('light-mode');
-                toggle.textContent = '☾';
-            } else {
-                toggle.textContent = '☀';
-            }
-            try { localStorage.setItem('theme', mode); } catch(e) {}
-        }
+                setTheme(root.classList.contains('light-mode') ? 'light' : 'dark', false);
+                toggle.addEventListener('click', function () {
+                    setTheme(root.classList.contains('light-mode') ? 'dark' : 'light', true);
+                });
+            }());
 
-        var saved;
-        try { saved = localStorage.getItem('theme'); } catch(e) {}
+            (function () {
+                var bar = document.getElementById('reading-progress');
+                if (!bar) return;
+                function updateProgress() {
+                    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+                    var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    bar.style.width = Math.min(docHeight > 0 ? (scrollTop / docHeight) * 100 : 0, 100) + '%';
+                }
+                window.addEventListener('scroll', updateProgress, { passive: true });
+                updateProgress();
+            }());
 
-        if (saved === 'light') {
-            setTheme('light');
-        } else if (saved === 'dark') {
-            setTheme('dark');
-        } else {
-            toggle.textContent = window.matchMedia('(prefers-color-scheme: light)').matches ? '☾' : '☀';
-        }
-
-        toggle.addEventListener('click', function() {
-            var isLight = document.documentElement.classList.contains('light-mode');
-            setTheme(isLight ? 'dark' : 'light');
-        });
-    })();
-
-    (function() {
-        var bar = document.getElementById('reading-progress');
-        if (!bar) return;
-
-        function updateProgress() {
-            var scrollTop = window.scrollY || document.documentElement.scrollTop;
-            var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-            bar.style.width = Math.min(progress, 100) + '%';
-        }
-
-        window.addEventListener('scroll', updateProgress, { passive: true });
-        updateProgress();
-    })();
-
-    (function() {
-        var articles = document.querySelectorAll('.article-content img');
-        for (var i = 0; i < articles.length; i++) {
-            if (!articles[i].hasAttribute('loading')) {
-                articles[i].setAttribute('loading', 'lazy');
-            }
-        }
-    })();
-    </script>
+            (function () {
+                var images = document.querySelectorAll('.article-content img, .page-content img');
+                for (var i = 0; i < images.length; i++) {
+                    if (!images[i].hasAttribute('loading')) images[i].setAttribute('loading', 'lazy');
+                }
+            }());
+        </script>
     </body>
 </html>

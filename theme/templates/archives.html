@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% from 'macros.html' import post_listing with context %}
+
+{% block title %}Archive - {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<header class="listing-header">
+    <p class="eyebrow">Browse</p>
+    <h1>Archive</h1>
+</header>
+<div class="post-list archive-list">
+    {% for article in dates %}
+    {{ post_listing(article) }}
+    {% endfor %}
+</div>
+{% endblock %}

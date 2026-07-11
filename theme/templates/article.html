@@ -1,60 +1,47 @@
 {% extends "base.html" %}
-{% from 'macros.html' import og_article %}
+{% from 'macros.html' import og_article, post_meta, post_tags with context %}
 
-{% block title %}
-{{ article.title }} - {{ SITENAME }}
-{% endblock %}
+{% block title %}{{ article.title }} - {{ SITENAME }}{% endblock %}
 
 {% block metadata %}
-<meta name='description' content='{{ article.summary|striptags }}'>
-<meta name="keywords" content="{% for tag in article.tags %}
- {% if loop.last %}
-  {{ tag }}
-  {% else %}
-  {{ tag }},
-  {% endif %}
-  {% endfor %}">
-<link rel='canonical' href='{{ SITEURL }}/{{ article.url }}'>
+<meta name="description" content="{{ article.summary|striptags }}">
+<meta name="keywords" content="{% for tag in article.tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor %}">
+<link rel="canonical" href="{{ SITEURL }}/{{ article.url }}">
 {{ og_article(article.title ~ ' - ' ~ SITENAME, article.summary|striptags, SITEURL ~ '/' ~ article.url) }}
-<meta property="article:section" content="{{ category }}" />
-<meta property="article:tag" content="{{ category }}" />
+<meta property="article:section" content="{{ category }}">
+<meta property="article:tag" content="{{ category }}">
 {% endblock %}
 
 {% block content %}
-<div class="article">
-    {% if article.cover_image_url %}
-    <div class="cover">
-        <img src="{{ article.cover_image_url }}" alt="Cover image" loading="eager">
-    </div>
-    {% endif %}
-    <h1>{{ article.title }}</h1>
-    <small>published {{ article.date.strftime('%d/%m/%Y') }} in <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></small>
-    <small>| tags: </small>
-    {% for tag in article.tags %}
-    {% if loop.last %}
-    <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
-    {% else %}
-    <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>,</span>
-    {% endif %}
-    {% endfor %}
-    {% if article.readtime %}
-    <span><p>Estimated read time: {{ article.readtime.minutes }} min.</p></span>
-    {% endif %}
+<article class="article">
+    <header class="article-header">
+        {% if article.cover_image_url %}
+        <div class="cover"><img src="{{ article.cover_image_url }}" alt="" loading="eager"></div>
+        {% endif %}
+        <p class="eyebrow">{{ category }}</p>
+        <h1>{{ article.title }}</h1>
+        {{ post_meta(article, false) }}
+        {{ post_tags(article) }}
+        {% if article.summary %}<div class="article-summary">{{ article.summary }}</div>{% endif %}
+    </header>
     <div class="article-content">
         {{ article.content }}
         {% if article.photo_gallery %}
-<div class="gallery">
-    {% for title, gallery in article.photo_gallery %}
-        <h1>{{ title }}</h1>
-            {% for name, photo, thumb, exif, caption in gallery %}
-                    <a href="{{ SITEURL }}/{{ photo }}" title="{{ name }}" exif="{{ exif }}" caption="{{ caption }}"><img src="{{ SITEURL }}/{{ thumb }}"></a>
+        <div class="gallery">
+            {% for title, gallery in article.photo_gallery %}
+            <section aria-labelledby="gallery-{{ loop.index }}">
+                <h2 id="gallery-{{ loop.index }}">{{ title }}</h2>
+                <div class="gallery-grid">
+                    {% for name, photo, thumb, exif, caption in gallery %}
+                    <a href="{{ SITEURL }}/{{ photo }}" title="{{ name }}" exif="{{ exif }}" caption="{{ caption }}"><img src="{{ SITEURL }}/{{ thumb }}" alt="{{ caption or name }}"></a>
+                    {% endfor %}
+                </div>
+            </section>
             {% endfor %}
-    {% endfor %}
-</div>
-{% endif %}
+        </div>
+        {% endif %}
     </div>
-</div>
-
+</article>
 {% endblock %}
 
 {% block comments %}
@@ -80,10 +67,9 @@
 {% block side %}
 {{ super() }}
 {% if article.toc %}
-<div class="widget">
-    <nav class="toc">
-        {{ article.toc }}
-    </nav>
-</div>
+<section class="widget toc-widget" aria-labelledby="toc-title">
+    <h2 id="toc-title">On this page</h2>
+    <nav class="toc" aria-label="Table of contents">{{ article.toc }}</nav>
+</section>
 {% endif %}
 {% endblock %}

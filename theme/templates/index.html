@@ -1,63 +1,42 @@
-{% extends "main.html" %}
-{% from 'macros.html' import og_article %}
+{% extends "base.html" %}
+{% from 'macros.html' import og_article, post_listing with context %}
 
 {% block metadata %}
 <meta name="description" content="Random things open source, Linux and gaming. Tutorials, advice, work-arounds and projects updates that I'm working on with a focus on Debian and Arch Linux.">
 {{ og_article(SITENAME, 'Get OFF MY LAWN! All things open source, linux and gaming', SITEURL) }}
-<meta property="article:section" content="Main" />
-<meta property="article:tag" content="Main" />
+<meta property="article:section" content="Main">
+<meta property="article:tag" content="Main">
 <link rel="canonical" href="{{ SITEURL }}">
 <meta name="keywords" content="Linux, OpenSource, Games, Python, Arch">
 {% endblock %}
 
 {% block content %}
-<h1>Welcome to my corner of the internet</h1>
-Enjoy your stay! You can find all the things I'm working on with regards to:
+<section class="home-intro" aria-labelledby="welcome-title">
+    <p class="eyebrow">Dev Oops</p>
+    <h1 id="welcome-title">Welcome to my corner of the internet</h1>
+    <p>Enjoy your stay! You can find all the things I'm working on with regards to open source, hiking, travel, guitars, amps and effects, overlanding, drones, gaming (in Linux and Steam Deck), and Atiya my dog.</p>
+</section>
 
-<ul>
-    <li>open source</li>
-    <li>hiking</li>
-    <li>travel</li>
-    <li>guitars, amps and effects</li>
-    <li>overlanding</li>
-    <li>drones</li>
-    <li>gaming (in linux and steamdeck)</li>
-    <li>Atiya my dog</li>
-</ul>
-
-<hr>
-
-<h1>Latest Blog Posts</h1>
 {% if articles %}
-{% for article in articles[:7] %}
-<div class="article-index">
-    <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
-    published on {{ article.date.strftime('%d/%m/%Y') }}
-    {{ article.summary }}
-    <small>| tags: </small>{% for tag in article.tags %}
-    {% if loop.last %}
-    <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
-    {% else %}
-    <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>,</span>
-    {% endif %}
-    {% endfor %}
-</div>
-{% endfor %}
-{% endif %}
+<section class="home-latest" aria-labelledby="latest-title">
+    <h2 id="latest-title">Latest</h2>
+    {{ post_listing(articles[0], true) }}
+</section>
 
-<hr>
-<h2>Tag Cloud</h2>
-<hr>
-<ul class="tagcloud">
-    {% for tag in tag_cloud %}
-    <li class="tag-{{ tag.1 }}">
-        <a href="{{ SITEURL }}/{{ tag.0.url }}">
-            {{ tag.0 }}
-            {% if TAG_CLOUD_BADGE %}
-            <span class="badge">{{ tag.2 }}</span>
-            {% endif %}
-        </a>
-    </li>
-    {% endfor %}
-</ul>
+{% if articles[1:7] %}
+<section class="recent-posts" aria-labelledby="recent-title">
+    <div class="section-heading">
+        <h2 id="recent-title">More recent posts</h2>
+        <a href="/archives.html">Browse archive <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="post-list">
+        {% for article in articles[1:7] %}
+        {{ post_listing(article) }}
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+{% else %}
+<p>No posts have been published yet.</p>
+{% endif %}
 {% endblock %}

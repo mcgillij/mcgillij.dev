@@ -1,30 +1,22 @@
 {% extends "base.html" %}
-{% from 'macros.html' import og_article %}
+{% from 'macros.html' import og_article, post_listing with context %}
 
 {% block metadata %}
 <meta name="description" content="Random things open source, Linux and gaming. Tutorials, advice, work-arounds and projects updates that I'm working on with a focus on Debian and Arch Linux.">
 {{ og_article(SITENAME, 'Get OFF MY LAWN! All things open source, linux and gaming', SITEURL ~ '/pages/blog.html') }}
-<meta property="article:section" content="Main" />
-<meta property="article:tag" content="Main" />
 <link rel="canonical" href="{{ SITEURL }}/pages/blog.html">
-<meta name="keywords" content="Linux, OpenSource, Games, Python, Arch">
 {% endblock %}
 
 {% block content %}
-    {% if articles %}
-        {% for article in articles %}
-            <div class="article-index">
-                <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
-                published on {{ article.date.strftime('%d/%m/%Y') }}
-                <small>| tags: </small>{% for tag in article.tags %}
-                    {% if loop.last %}
-                        <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
-                    {% else %}
-                       <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>,</span>
-                    {% endif %}
-                {% endfor %}
-                {{ article.summary }}
-            </div>
-        {% endfor %}
-    {% endif %}
+<header class="listing-header">
+    <p class="eyebrow">Writing</p>
+    <h1>Blog</h1>
+</header>
+{% if articles %}
+<div class="post-list">
+    {% for article in articles %}
+    {{ post_listing(article) }}
+    {% endfor %}
+</div>
+{% endif %}
 {% endblock %}
