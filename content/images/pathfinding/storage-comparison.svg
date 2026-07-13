@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Galaxy route data storage comparison</title>
+  <desc id="desc">A logarithmic bar chart comparing a 29 GiB legacy edge cache for 1.13 million systems, a 35.75 MiB spatial catalog for 1.13 million systems, and a 336.8 MiB spatial catalog for 10.79 million systems.</desc>
+  <rect width="1200" height="720" fill="#111827"/>
+  <text x="70" y="65" fill="#f9fafb" font-family="sans-serif" font-size="34" font-weight="700">Route data stopped growing with every road</text>
+  <text x="70" y="103" fill="#9ca3af" font-family="sans-serif" font-size="19">Storage on disk · logarithmic scale · measured artifacts</text>
+
+  <g font-family="sans-serif" font-size="16" fill="#9ca3af">
+    <line x1="115" y1="590" x2="1120" y2="590" stroke="#374151"/>
+    <line x1="115" y1="505" x2="1120" y2="505" stroke="#374151"/>
+    <line x1="115" y1="420" x2="1120" y2="420" stroke="#374151"/>
+    <line x1="115" y1="335" x2="1120" y2="335" stroke="#374151"/>
+    <line x1="115" y1="250" x2="1120" y2="250" stroke="#374151"/>
+    <line x1="115" y1="165" x2="1120" y2="165" stroke="#374151"/>
+    <text x="95" y="596" text-anchor="end">1 MiB</text>
+    <text x="95" y="511" text-anchor="end">10 MiB</text>
+    <text x="95" y="426" text-anchor="end">100 MiB</text>
+    <text x="95" y="341" text-anchor="end">1 GiB</text>
+    <text x="95" y="256" text-anchor="end">10 GiB</text>
+    <text x="95" y="171" text-anchor="end">100 GiB</text>
+  </g>
+
+  <rect x="190" y="204" width="235" height="386" rx="8" fill="#ef4444"/>
+  <rect x="500" y="458" width="235" height="132" rx="8" fill="#38bdf8"/>
+  <rect x="810" y="375" width="235" height="215" rx="8" fill="#34d399"/>
+
+  <g font-family="sans-serif" text-anchor="middle">
+    <text x="307" y="185" fill="#fecaca" font-size="28" font-weight="700">29 GiB</text>
+    <text x="617" y="439" fill="#bae6fd" font-size="28" font-weight="700">35.75 MiB</text>
+    <text x="927" y="356" fill="#a7f3d0" font-size="28" font-weight="700">336.8 MiB</text>
+
+    <text x="307" y="625" fill="#f9fafb" font-size="19" font-weight="700">Stored edge cache</text>
+    <text x="307" y="651" fill="#9ca3af" font-size="16">1.13M systems</text>
+    <text x="307" y="674" fill="#9ca3af" font-size="16">1.59B directed roads</text>
+
+    <text x="617" y="625" fill="#f9fafb" font-size="19" font-weight="700">Spatial catalog v2</text>
+    <text x="617" y="651" fill="#9ca3af" font-size="16">1.13M systems</text>
+    <text x="617" y="674" fill="#9ca3af" font-size="16">roads found on demand</text>
+
+    <text x="927" y="625" fill="#f9fafb" font-size="19" font-weight="700">Spatial catalog v2</text>
+    <text x="927" y="651" fill="#9ca3af" font-size="16">10.79M systems</text>
+    <text x="927" y="674" fill="#9ca3af" font-size="16">same routing model</text>
+  </g>
+</svg>
+

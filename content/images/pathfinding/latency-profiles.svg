@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Recorded route latency profiles</title>
+  <desc id="desc">A logarithmic timeline showing observed ranges for legacy graph search and end-to-end routing, plus p95 measurements for spatial catalog v2 at 1.13 and 10.79 million systems. The chart warns that workloads differ.</desc>
+  <rect width="1200" height="760" fill="#111827"/>
+  <text x="65" y="60" fill="#f9fafb" font-family="sans-serif" font-size="34" font-weight="700">Where the route time went</text>
+  <text x="65" y="98" fill="#9ca3af" font-family="sans-serif" font-size="18">Recorded snapshots · logarithmic milliseconds · workloads changed between eras</text>
+
+  <g font-family="sans-serif" font-size="16" fill="#9ca3af">
+    <line x1="390" y1="150" x2="1100" y2="150" stroke="#4b5563" stroke-width="2"/>
+    <line x1="390" y1="150" x2="390" y2="665" stroke="#374151"/>
+    <line x1="531" y1="150" x2="531" y2="665" stroke="#374151"/>
+    <line x1="673" y1="150" x2="673" y2="665" stroke="#374151"/>
+    <line x1="815" y1="150" x2="815" y2="665" stroke="#374151"/>
+    <line x1="957" y1="150" x2="957" y2="665" stroke="#374151"/>
+    <line x1="1100" y1="150" x2="1100" y2="665" stroke="#374151"/>
+    <text x="390" y="135" text-anchor="middle">10 ms</text>
+    <text x="531" y="135" text-anchor="middle">100 ms</text>
+    <text x="673" y="135" text-anchor="middle">1 s</text>
+    <text x="815" y="135" text-anchor="middle">10 s</text>
+    <text x="957" y="135" text-anchor="middle">100 s</text>
+    <text x="1100" y="135" text-anchor="middle">1,000 s</text>
+  </g>
+
+  <g font-family="sans-serif">
+    <text x="65" y="215" fill="#f9fafb" font-size="20" font-weight="700">Legacy: search loaded graph</text>
+    <text x="65" y="240" fill="#9ca3af" font-size="16">1.13M systems · observed range</text>
+    <line x1="438" y1="226" x2="644" y2="226" stroke="#fbbf24" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="438" cy="226" r="9" fill="#fef3c7"/><circle cx="644" cy="226" r="9" fill="#fef3c7"/>
+    <text x="438" y="203" fill="#fde68a" font-size="15" text-anchor="middle">22 ms</text>
+    <text x="644" y="203" fill="#fde68a" font-size="15" text-anchor="middle">621 ms</text>
+
+    <text x="65" y="315" fill="#f9fafb" font-size="20" font-weight="700">Legacy: end to end</text>
+    <text x="65" y="340" fill="#9ca3af" font-size="16">load + decode + build + search</text>
+    <line x1="750" y1="326" x2="842" y2="326" stroke="#ef4444" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="750" cy="326" r="9" fill="#fecaca"/><circle cx="842" cy="326" r="9" fill="#fecaca"/>
+    <text x="750" y="303" fill="#fecaca" font-size="15" text-anchor="middle">3.5 s</text>
+    <text x="842" y="303" fill="#fecaca" font-size="15" text-anchor="middle">15.6 s</text>
+
+    <text x="65" y="415" fill="#f9fafb" font-size="20" font-weight="700">Catalog v2 baseline</text>
+    <text x="65" y="440" fill="#9ca3af" font-size="16">1.13M systems · p95</text>
+    <circle cx="565" cy="426" r="12" fill="#38bdf8"/>
+    <text x="565" y="399" fill="#bae6fd" font-size="15" text-anchor="middle">173 ms warm</text>
+    <circle cx="656" cy="426" r="12" fill="#0ea5e9"/>
+    <text x="656" y="459" fill="#bae6fd" font-size="15" text-anchor="middle">~764 ms load + route</text>
+
+    <text x="65" y="525" fill="#f9fafb" font-size="20" font-weight="700">Catalog v2 at 10x</text>
+    <text x="65" y="550" fill="#9ca3af" font-size="16">10.79M systems · documented p95 range</text>
+    <line x1="643" y1="536" x2="650" y2="536" stroke="#34d399" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="643" cy="536" r="9" fill="#a7f3d0"/><circle cx="650" cy="536" r="9" fill="#a7f3d0"/>
+    <text x="646" y="509" fill="#a7f3d0" font-size="15" text-anchor="middle">606–697 ms warm</text>
+    <line x1="809" y1="586" x2="823" y2="586" stroke="#10b981" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="809" cy="586" r="9" fill="#a7f3d0"/><circle cx="823" cy="586" r="9" fill="#a7f3d0"/>
+    <text x="816" y="619" fill="#a7f3d0" font-size="15" text-anchor="middle">9.1–11.45 s cold load + route</text>
+  </g>
+
+  <rect x="65" y="670" width="1070" height="58" rx="10" fill="#1f2937"/>
+  <text x="600" y="705" text-anchor="middle" fill="#d1d5db" font-family="sans-serif" font-size="17">These profiles explain bottlenecks; they are not an apples-to-apples algorithm race.</text>
+</svg>
+
